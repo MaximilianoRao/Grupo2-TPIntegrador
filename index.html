@@ -4,10 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>TP Integrador</title>
+    <link rel="icon" href="./assets/img/cropped-cropped-LOGO-MOVING.ico">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/mediaquereis.css">
+    <link rel="stylesheet" href="./assets/animaciones.css">
+    <link   
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Moving Rentals Tulum</title>
 </head>
 <body>
+    <header class="header">
+        <a href="./index.html" class="header__logo">
+          <!-- <img src="./assets/img/logo2.png" alt="logo" class="logo-img"> -->
+        </a>
+        <nav class="navbar">
+          <label for="toggle-menu" class="menu-label">
+            <i class="fa-solid fa-bars-staggered toggle-menu"></i>
+          </label>
+          <input type="checkbox" id="toggle-menu">
+          <ul class="navbar-list">
+            <li>
+              <a href="#hero">Cotización</a>
+            </li>
+            <li>
+              <a href="#offers">Productos</a>
+            </li>
+            <li>
+              <a href="#contact">Contacto</a>
+            </li>
+            <li>
+              <a href="#about-us">Nosotros</a>
+            </li>
+          </ul>
+          <div class="overlay"></div>
+        </nav>
+      </header>
+      <!-- main -->
+    <main class="main">
+      <!-- hero -->
+      <section id="hero">
+        <div class="hero__card">
+          <img src="./assets/img/D150-sunset-819x1024.jpg" alt="moto" class="hero__card__img">
+        </div>
+        <div class="hero__info">
+          <h1>Moving Rentals Tulum</h1>
+          <p>Te ofrecemos amplia Variedad De Modelos
+            No importa el tipo de viaje que desee realizar, estamos seguros de que tenemos el modelo de vehículo adecuado para vos.</p>
+          <div class="hero__info__btn">
+            <a href="#" class="btn btn--primary">Mas info...</a>
+            <a href="#" class="btn btn--left">Ver promociones</a>
+          </div>
+        </div>
+      </section>
+      <!-- offers -->
+      <section id="offers">
+        <h2 class="offers__title">Llevate lo mejor</h2>
+        <div class="offers__categories">
+          <a href="#" class="btn btn--left">Imperdibles</a>
+          <a href="#" class="btn btn--left">Todo Terreno</a>
+          <a href="#" class="btn btn--left">Bicicletas</a>
+          <a href="#" class="btn btn--left">Scooters</a>
+          <a href="#" class="btn btn--left">Excursiones</a>
+          <a href="#" class="btn btn--left">Accesorios</a>
+        </div>
+        <div class="offers__container">
+          <div class="offers__info">
+            <h2>Italika Cuatrimoto  ATV180 Verde Negro</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/vehiculos/Cuatrimoto-ATV180-Verde-Negro-1200x825-1.png" alt="Italika Cuatrimoto  ATV180 Verde Negro">
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="offers__info">
+            <h2>Italika Cuatrimoto  ATV200 Naranja Negro</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/vehiculos/Cuatrimoto-ATV200-Naranja-Negro-1200x1000-1.png" alt="Italika Cuatrimoto  ATV200 Naranja Negro">
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="offers__info">
+            <h2>Italika D125 LT Azul Negro</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/vehiculos/Motoneta-D125-LT-Azul-Negro.png"Italika D125 LT Azul Negro">
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="offers__info">
+            <h2>Italika Vitalia 150 Azul Blanco</h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Azul-Blanco.png" alt="Italika Vitalia 150 Azul Blanco
+              ">
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="offers__info">
+            <h2>Italika XW150 Rojo Negro
+            </h2>
+            <div class="offers__info__img">
+              <img src="./assets/img/vehiculos/Motoneta-XW150-Rojo-Negro.png" alt="Italika XW150 Rojo Negro
+              ">
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <a href="#" class="btn btn--primary">Ver mas...</a>
+        <!-- <p class="p-end">Promocion valida por tiempo limitado o hasta agotar stock y cuotas sin interes con tarjetas de bancos selecionados.<a href="#"> Para mas informacion consulte Bases y Condiciones</a></p> -->
+      </section>
+      <!-- warranty -->
     
     <script src="./main.js"></script>
 </body>
