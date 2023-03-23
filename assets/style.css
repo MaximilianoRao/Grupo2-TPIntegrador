@@ -292,7 +292,7 @@ section {
     background-size: contain;
     border-radius: 10px;
     max-width: 220px;
-    min-height: 470px;
+    min-height: 350px;
     padding: 20px 20px;
     cursor: pointer;
     position: relative;
@@ -306,7 +306,7 @@ section {
 }
 
 .offers__info img {
-    width: 150px;
+    width: 200px;
 }
 
 .offers__info__img {
@@ -344,7 +344,7 @@ section {
     color: white;
     position: absolute;
     right: 3%;
-    top: 90%;
+    top: 87%;
     background: cornflowerblue;
     border-radius: 50%;
     transition: all 0.2s linear; 
