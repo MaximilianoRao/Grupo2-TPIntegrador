@@ -1,0 +1,86 @@
+* {
+  /*va siempre el box-sizing para que ocupe todo el contenedor la caja.*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+  border: 0px;
+  margin-bottom: 0.5rem !important;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.instagram {
+  background-color: #ac2bac;
+}
+
+.footer-icono {
+  border-radius: 50%;
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.google {
+  background-color: #dd4b39;
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+.apiclass {
+  margin-bottom: 0px;
+}
+
+.eliminarpadding {
+  padding: 0%;
+}
+
+.sinborde {
+  border: none;
+}
+
+.mysize {
+  max-height: 500px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.carousel-caption {
+  bottom: 12rem;
+  background-color: rgba(168, 164, 164, 0.7);
+  border-radius: 50px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #46494a;
+}
+
+.section-title {
+  text-align: center;
+  padding: 1%;
+}
+
+.espec {
+  background-color: rgba(168, 164, 164, 0.187);
+  border-radius: 10px;
+}
+
+.imagenform {
+  border: 1px solid black;
+  max-width: 50%;
+}
+
+@media (max-width: 375px) {
+  .carousel-caption {
+    bottom: 0px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
