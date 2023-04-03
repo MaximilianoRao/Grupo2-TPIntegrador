@@ -1,23 +1,41 @@
 $(document).ready(function() {
     // agregar un controlador de eventos para cada pestaña de filtro
     $('#filtro-imagenes a').click(function() {
-      // obtener el valor del atributo data-filter
-      const valorFiltro = $(this).attr('data-filter');
-
-      // mostrar todas las imágenes si se selecciona "Todos"
+      
+      let valorFiltro = $(this).attr('data-filter');
+      
+      
       if (valorFiltro === 'todos') {
         $('.filtro-imagen').fadeIn();
       } else {
-        // ocultar todas las imágenes y mostrar solo las que coinciden con el filtro seleccionado
+        
         $('.filtro-imagen').fadeOut();
         $('.filtro-imagen.' + valorFiltro).fadeIn();
       }
-
-      // agregar la clase "active" a la pestaña de filtro seleccionada y eliminarla de las demás
-     
-      $(this).addClass('active').parent().addClass('active').siblings().find('a').removeClass('active').parent().removeClass('active');
+      $(this).addClass('active');
+     $(this).parent().siblings().find('a').removeClass('active');
     });
+
+
+    $('.nbtnext').click(function () {
+      // Cambiar el nav-link activo al siguiente
+      //$('#paso1-tab').next().find('a').tab('show');
+     // console.log($(this).parent().attr('id'));
+      let id = $(this).parent().attr('id');
+      let posicion = parseInt($('.card-header-tabs .nav-item').find(".active").attr('href')[5]);
+       // $('.card-header-tabs .nav-item').find(".active").addClass('disabled');
+       // $('.card-header-tabs .nav-item').find(".active").removeClass('active');
+       
+        //parseInt($('.card-header-tabs .nav-item').find(".disabled").[0].attributes.href.textContent[5]);
+      
+      //$('.card-header-tabs .nav-item').find(".active").removeClass('active');
+    });
+
+
+
+
   });
 
 
+  
 
