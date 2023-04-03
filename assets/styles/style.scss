@@ -56,7 +56,7 @@ iframe{
  
 
 .carousel-caption{
-    bottom: 12rem;
+    bottom: 30%;
     background-color: rgba(168, 164, 164, 0.7);
     border-radius: 50px;
   }
@@ -80,9 +80,11 @@ background-color: #46494a;
     max-width: 50%;
 }
 
-  @media (max-width: 375px) {
+  @media (max-width: 382px) {
     .carousel-caption{
         bottom: 0px !important;
+        position: inherit;
+        left: 0px;
         
        
     }
