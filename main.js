@@ -27,6 +27,7 @@ $(document).ready(function() {
       let nuevaposicion = '#step'+ (paso+1);
       nuevaPestaña = $('a.nav-link[href$="'+ (paso+1) +'"]');
       pestañaActual = $('.card-header-tabs .nav-item').find(".active")
+      
       pestañaActual[0].ariaSelected = false;
       pestañaActual[0].tabIndex = -1;
       nuevaPestaña[0].ariaSelected = true;
