@@ -127,8 +127,16 @@
                               </div>
                             </div>
                           </div>
-                            <label class="form-label"  for="cantPersonas">Cantidad de personas:</label>
-                            <input type="number" id="cantPersonas" class="form-control">
+
+                          <div class="mb-3">
+                            <label class="form-label">Cantidad de personas:</label>
+                            <select class="form-select" id="selectcant" aria-label="Cantidad de personas:">
+                              <option selected>Seleccione la cantidad de personas</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                            </select>
+                          </div>
+                            
                           
                         </div>
                           <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
@@ -140,22 +148,32 @@
                             <div class="row">
                               <div class="col-lg-6">
                               <div class="mb-3">
-                              <label class="form-label">Tipo de Vehiculo</label>
-                              <select class="form-select" aria-label="Tipo de Vehiculo">
-                                <option selected>Seleccione el tipo</option>
+                              <label class="form-label">Tipo de Vehículo</label>
+                              <select class="form-select" id="selecttipo" aria-label="Tipo de Vehiculo">
+                                <option selected>Seleccione el tipo:</option>
                                 <option value="bicicleta">Bicicleta</option>
                                 <option value="cuatriciclo">Cuatriciclo</option>
-                                <option value="motocicleta">Motocicleta</option>
+                                <option value="buggies">Buggie</option>
+                                <option value="motocros">Motocross</option>
+                                <option value="scooter">Scooter</option>
                               </select>
                             </div>
                             
                             <div class="mb-3">
                               <label class="form-label">Modelo de Vehiculo</label>
-                              <select class="form-select" aria-label="Vehiculo">
+                              <select class="form-select" id="selectvehiculo" aria-label="Vehiculo" disabled="true">
                                 <option selected>Seleccione el vehiculo</option>
-                                <option value="vehiculo1">Vehiculo 1</option>
-                                <option value="vehiculo2">Vehiculo 2</option>
-                                <option value="vehiculo3">Vehiculo 3</option>
+                                <option value="panther">Black Panther Beach Cruiser Vintage Verde</option>
+                                <option value="molotov">Dinamo Molotov 200CC Rojo</option>
+                                <option value="atv180">Italika Cuatrimoto  ATV180 Verde Negro</option>
+                                <option value="atv200">Italika Cuatrimoto  ATV200 Naranja Negro</option>
+                                <option value="dm250">Italika DobleProposito DM250 X Negro</option>
+                                <option value="d125lt">Italika D125 LT Azul Negro</option>
+                                <option value="d125">Italika D125 Blanco Azul</option>
+                                <option value="d150">Italika D150 Azul Negro</option>
+                                <option value="xw150">Italika XW150 Rojo Negro</option>
+                                <option value="150azul">Italika Vitalia 150 Azul Blanco</option>
+                                <option value="150rojo">Italika Vitalia 150 Rojo Blanco</option>
                               </select>
                             </div>
                           
@@ -171,12 +189,13 @@
                             
                           </div>
                           <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
-                          <button type="button" class="btn btn-primary nbtnext">Finalizar</button>
+                          <button type="button" class="btn btn-primary nbtnext nbtend">Finalizar</button>
                         </div>
                         <div class="tab-pane fade fieldset" id="step4">
                           <div class="mb-3">
                           Acá va el resumen con todo lo cargado
                           </div>
+                          <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
                           <button type="button" class="btn btn-primary">Exportar a PDF</button>
                           <button type="submit" class="btn btn-success ms-2">Enviar</button>
                         </div>
