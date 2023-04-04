@@ -80,6 +80,10 @@ background-color: #46494a;
     max-width: 50%;
 }
 
+#imgselect{
+display: none;
+}
+
   @media (max-width: 382px) {
     .carousel-caption{
         bottom: 0px !important;
