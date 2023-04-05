@@ -5,6 +5,16 @@
   padding: 0;
 }
 
+/* body{
+
+    background-image: url(../img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+} */
 html {
   scroll-behavior: smooth;
 }
@@ -51,6 +61,7 @@ html {
 
 .card {
   min-height: 520px;
+  background-color: rgba(58, 90, 92, 0.2941176471);
 }
 .card:hover {
   box-shadow: 0px 0px 30px rgba(98, 199, 185, 0.8);
@@ -133,7 +144,6 @@ iframe {
   max-height: 500px !important;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow-y: hidden;
 }
 
 .carousel-caption {
@@ -159,6 +169,10 @@ iframe {
 .imagenform {
   border: 1px solid black;
   max-width: 50%;
+}
+
+#imgselect {
+  display: none;
 }
 
 @media (max-width: 382px) {

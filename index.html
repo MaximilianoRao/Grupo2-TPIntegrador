@@ -61,32 +61,32 @@
 
   <section id="cotizacion" class="border-bottom">
     <div class="container">
-
+      
       <div class="row">
         <div class="col-lg-6">
           <div class="mysize">
 
           <div class="container eliminarpadding">
             <div class="row justify-content-center">
-
+              <h5 class="text-center">Cotizador</h5>
               <div class="card sinborde">
                 <div class="card-header text-white">
                   <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item active ">
+                    <li class="nav-item">
                       <!--Si cambio el active al otro step y a su ves tambien lo cambio en el form
                                 se seleccionan los siguientes pasos
-                            tambien se puede agregar la clase disable para que no se puedan apretar
+                            tambien se puede agregar la clase disabled para que no se puedan apretar
                           Con poner la clase disabled en la etiqueta a QUEDA DESHABILITADO-->
                       <a class="nav-link active wz" data-bs-toggle="tab" href="#step1">Información Personal</a>
                     </li>
-                    <li class="nav-item ">
-                      <a class="nav-link wz" data-bs-toggle="tab" href="#step2">Detalle</a>
+                    <li class="nav-item">
+                      <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step2">Detalle</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link wz" data-bs-toggle="tab" href="#step3">Vehículo</a>
+                      <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step3">Vehículo</a>
                     </li>
-                    <li class="nav-item wz">
-                      <a class="nav-link wz" data-bs-toggle="tab" href="#step4">Resumen</a>
+                    <li class="nav-item">
+                      <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step4">Resumen</a>
                     </li>
                   </ul>
                 </div>
@@ -115,7 +115,7 @@
                             <input type="datetime-local" id="fecha-hora-f" class="form-control">
                         
                             <div class="mb-3">
-                              <label class="form-label">Modo de entrega</label>
+                              <label class="form-label">Forma de entrega</label>
                               <div>
                               <div class="form-check">
                                 <label class="form-check-label" for="delivery">Delivery</label>
@@ -127,11 +127,19 @@
                               </div>
                             </div>
                           </div>
-                            <label class="form-label"  for="cantPersonas">Cantidad de personas:</label>
-                            <input type="number" id="cantPersonas" class="form-control">
+
+                          <div class="mb-3">
+                            <label class="form-label">Cantidad de personas:</label>
+                            <select class="form-select" id="selectcant" aria-label="Cantidad de personas:">
+                              <option selected>Seleccione la cantidad de personas</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                            </select>
+                          </div>
+                            
                           
                         </div>
-                          <button type="button" class="btn btn-primary">Anterior</button>
+                          <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
                           <button type="button" class="btn btn-primary ms-2 nbtnext">Siguiente</button>
                         </div>
                         
@@ -140,22 +148,32 @@
                             <div class="row">
                               <div class="col-lg-6">
                               <div class="mb-3">
-                              <label class="form-label">Tipo de Vehiculo</label>
-                              <select class="form-select" aria-label="Tipo de Vehiculo">
-                                <option selected>Seleccione el tipo</option>
+                              <label class="form-label">Tipo de Vehículo</label>
+                              <select class="form-select" id="selecttipo" aria-label="Tipo de Vehiculo">
+                                <option selected>Seleccione el tipo:</option>
                                 <option value="bicicleta">Bicicleta</option>
                                 <option value="cuatriciclo">Cuatriciclo</option>
-                                <option value="motocicleta">Motocicleta</option>
+                                <option value="buggies">Buggie</option>
+                                <option value="motocros">Motocross</option>
+                                <option value="scooter">Scooter</option>
                               </select>
                             </div>
                             
                             <div class="mb-3">
                               <label class="form-label">Modelo de Vehiculo</label>
-                              <select class="form-select" aria-label="Vehiculo">
+                              <select class="form-select" id="selectvehiculo" aria-label="Vehiculo" disabled="true">
                                 <option selected>Seleccione el vehiculo</option>
-                                <option value="vehiculo1">Vehiculo 1</option>
-                                <option value="vehiculo2">Vehiculo 2</option>
-                                <option value="vehiculo3">Vehiculo 3</option>
+                                <option value="panther">Black Panther Beach Cruiser Vintage Verde</option>
+                                <option value="molotov">Dinamo Molotov 200CC Rojo</option>
+                                <option value="atv180">Italika Cuatrimoto  ATV180 Verde Negro</option>
+                                <option value="atv200">Italika Cuatrimoto  ATV200 Naranja Negro</option>
+                                <option value="dm250">Italika DobleProposito DM250 X Negro</option>
+                                <option value="d125lt">Italika D125 LT Azul Negro</option>
+                                <option value="d125">Italika D125 Blanco Azul</option>
+                                <option value="d150">Italika D150 Azul Negro</option>
+                                <option value="xw150">Italika XW150 Rojo Negro</option>
+                                <option value="150azul">Italika Vitalia 150 Azul Blanco</option>
+                                <option value="150rojo">Italika Vitalia 150 Rojo Blanco</option>
                               </select>
                             </div>
                           
@@ -166,17 +184,21 @@
                               <label class="form-label">Deposito: </label>
                             </div>
                           </div>
-                            <div class="mb-3 col-lg-5 col-sm-6 offset-lg-1 imagenform">Acá se muestra el vehiculo que elijan</div>
+                          <div id="imgselect" class="col-lg-6">
+                            <img src="./assets/img/vehiculos/dinamo-molotov-rojo1200x900.png" class="card-img-top" alt="buggie">
+                          </div>
+                          
                           </div>
                             
                           </div>
-                          <button type="button" class="btn btn-primary">Anterior</button>
-                          <button type="button" class="btn btn-primary nbtnext">Finalizar</button>
+                          <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
+                          <button type="button" class="btn btn-primary nbtnext nbtend">Finalizar</button>
                         </div>
                         <div class="tab-pane fade fieldset" id="step4">
                           <div class="mb-3">
                           Acá va el resumen con todo lo cargado
                           </div>
+                          <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
                           <button type="button" class="btn btn-primary">Exportar a PDF</button>
                           <button type="submit" class="btn btn-success ms-2">Enviar</button>
                         </div>
@@ -206,21 +228,21 @@
               
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="./assets/img/Carusel/scooter-500x470.jpg" class="d-block w-100 img-thumbnail" alt="..."> 
+                  <img src="./assets/img/Carusel/scooter-500x470.jpg" class="d-block w-100" alt="..."> 
                   <div class="carousel-caption d-block">
                     <h5>Amplia variedad de MODELOS</h5>
                     <p>No importa el tipo de viaje que desee realizar, estamos seguros de que tenemos el modelo de vehículo adecuado para usted.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./assets/img/Carusel/bici-500x470.jpg" class="d-block w-100 img-thumbnail" alt="primeraImagen">
+                  <img src="./assets/img/Carusel/bici-500x470.jpg" class="d-block w-100" alt="primeraImagen">
                   <div class="carousel-caption d-block">
                     <h5>¿No sabes a dónde ir en Tulum?</h5>
                     <p>¡No te preocupes! ¡Te ayudaremos a encontrar los mejores lugares para visitar!</p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./assets/img/Carusel/cuatri-500x470.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                  <img src="./assets/img/Carusel/cuatri-500x470.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-block">
                     <h5>Opciones de entrega</h5>
                     Elegi la forma de entrega que más se adapte a tu viaje: <br>
@@ -231,7 +253,7 @@
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./assets/img/Carusel/scooter-r-500x470.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                  <img src="./assets/img/Carusel/scooter-r-500x470.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-block">
                     <h5>Viaja seguro</h5>
                     <strong>Todas las rentas incluyen seguro</strong> 
@@ -243,7 +265,7 @@
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="./assets/img/Carusel/moto-500x470.jpg" class="d-block w-100 img-thumbnail" alt="...">
+                  <img src="./assets/img/Carusel/moto-500x470.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-block">
                     <h5>Kilometros ILIMITADOS</h5>
                     Recorre libremente toda la ciudad
@@ -281,8 +303,8 @@
       <div class="row">
     <div class="col">
   <ul class="nav nav-pills justify-content-center mb-3" id="filtro-imagenes" role="tablist">
-    <li class="nav-item active" role="presentation">
-      <a class="nav-link active ws" id="filtro-todos" data-filter="todos" href="#!">Todos</a>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active wz" id="filtro-todos" data-filter="todos" href="#!">Todos</a>
     </li>
     <li class="nav-item" role="presentation">
       <a class="nav-link wz" id="filtro-bicicletas" data-filter="bicicletas" href="#!">Bicicletas</a>
@@ -308,14 +330,14 @@
       <div class="col-md-4 col-lg-3 filtro-imagen bicicletas">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Bicicleta-Cruiser-Vintage-Dama-Canasta.png" class="card-img-top" alt="bicicleta">
-          </div>
+          <img src="./assets/img/vehiculos/Bicicleta-Cruiser-Vintage-Dama-Canasta.png" class="card-img-top" alt="bicicleta">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Black Panther Beach Cruiser Vintage Verde</h5>
             <div class="espec text-center">
             <p class="card-text">
               <strong>Nro. de velocidades:</strong> 1 <br>
-              <strong>Mat del marco:</strong> Acero <br>
+              <strong>Mat. del marco:</strong> Acero <br>
               <strong>Llantas:</strong> Aluminio <br>
               <strong>Nro. de pasajeros:</strong> 1 <br>
             </p>
@@ -328,14 +350,14 @@
       <div class="col-md-4 col-lg-3 filtro-imagen buggies">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/dinamo-molotov-rojo1200x900.png" class="card-img-top" alt="buggie">
-          </div>
+          <img src="./assets/img/vehiculos/dinamo-molotov-rojo1200x900.png" class="card-img-top" alt="buggie">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Dinamo Molotov 200CC Rojo</h5>
             <div class="espec">
             <p class="card-text">
               <strong>Motor:</strong> 200cc <br>
-              <strong>Velocidad max:</strong> 65 KM/H <br>
+              <strong>Velocidad MAX:</strong> 65 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 2 <br>
             </p>
             </div>
@@ -347,14 +369,14 @@
       <div class="col-md-4 col-lg-3 filtro-imagen cuatriciclos">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Cuatrimoto-ATV180-Verde-Negro-1200x825-1.png" class="card-img-top" alt="atv180">
-          </div>
+          <img src="./assets/img/vehiculos/Cuatrimoto-ATV180-Verde-Negro-1200x825-1.png" class="card-img-top" alt="atv180">
+         </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Italika Cuatrimoto  ATV180 Verde Negro</h5>
             <div class="espec">
             <p class="card-text">
               <strong>Motor:</strong> 177cc <br>
-              <strong>Velocidad max:</strong> 65 KM/H <br>
+              <strong>Velocidad MAX:</strong> 65 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 1 <br>
             </p>
             </div>
@@ -366,14 +388,14 @@
       <div class="col-md-4 col-lg-3 filtro-imagen cuatriciclos">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Cuatrimoto-ATV200-Naranja-Negro-1200x1000-1.png" class="card-img-top" alt="atv200">
-          </div>
+          <img src="./assets/img/vehiculos/Cuatrimoto-ATV200-Naranja-Negro-1200x1000-1.png" class="card-img-top" alt="atv200">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Italika Cuatrimoto  ATV200 Naranja Negro</h5>
             <div class="espec">
             <p class="card-text">
               <strong>Motor:</strong> 200cc <br>
-              <strong>Velocidad max:</strong> 65 KM/H <br>
+              <strong>Velocidad MAX:</strong> 65 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 2 <br>
             </p>
             </div>
@@ -385,15 +407,15 @@
       <div class="col-md-4 col-lg-3 filtro-imagen motocross">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/DobleProposito-DM250-X-Negro-1.png" class="card-img-top" alt="motocross">
-          </div>
+          <img src="./assets/img/vehiculos/DobleProposito-DM250-X-Negro-1.png" class="card-img-top" alt="motocross">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Italika DobleProposito DM250 X Negro</h5>
             <div class="espec">
             <p class="card-text">
               
               <strong>Motor:</strong> 250cc <br>
-              <strong>Velocidad max:</strong> 100 KM/H <br>
+              <strong>Velocidad MAX:</strong> 100 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 2 <br>
             </p>
             </div>
@@ -405,14 +427,14 @@
       <div class="col-md-4 col-lg-3 filtro-imagen scooters">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Motoneta-D125-LT-Azul-Negro.png" class="card-img-top" alt="scooter-azul-negra">
-          </div>
+          <img src="./assets/img/vehiculos/Motoneta-D125-LT-Azul-Negro.png" class="card-img-top" alt="scooter-azul-negra">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Italika D125 LT Azul Negro</h5>
             <div class="espec">
             <p class="card-text">
               <strong>Motor:</strong> 124cc <br>
-              <strong>Velocidad max:</strong> 71 KM/H <br>
+              <strong>Velocidad MAX:</strong> 71 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 1 <br>
             </p>
             </div>
@@ -424,15 +446,15 @@
       <div class="col-md-4 col-lg-3 filtro-imagen scooters">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Motoneta-D125-Blanco-Azul.png" class="card-img-top" alt="scooter-blanco-azul">
-          </div>
+          <img src="./assets/img/vehiculos/Motoneta-D125-Blanco-Azul.png" class="card-img-top" alt="scooter-blanco-azul">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Italika D125 Blanco Azul</h5>
             <div class="espec">
             <p class="card-text">
               
               <strong>Motor:</strong> 124cc <br>
-              <strong>Velocidad max:</strong> 70 KM/H <br>
+              <strong>Velocidad MAX:</strong> 7 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 1 <br>
             </p>
             </div>
@@ -444,15 +466,15 @@
       <div class="col-md-4 col-lg-3 filtro-imagen scooters">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Motoneta-D150-Azul-Negro.png" class="card-img-top" alt="scooter150-azul-negro">
-          </div>
+          <img src="./assets/img/vehiculos/Motoneta-D150-Azul-Negro.png" class="card-img-top" alt="scooter150-azul-negro">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Italika D150 Azul Negro</h5>
             <div class="espec">
             <p class="card-text">
               
               <strong>Motor:</strong> 150cc <br>
-              <strong>Velocidad max:</strong> 90 KM/H <br>
+              <strong>Velocidad MAX:</strong> 90 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 2 <br>
             </p>
             </div>
@@ -465,15 +487,15 @@
       <div class="col-md-4 col-lg-3 filtro-imagen scooters">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Motoneta-XW150-Rojo-Negro.png" class="card-img-top" alt="scooterxw150-rojo-negro">
-          </div>
+          <img src="./assets/img/vehiculos/Motoneta-XW150-Rojo-Negro.png" class="card-img-top" alt="scooterxw150-rojo-negro">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Italika XW150 Rojo Negro</h5>
             <div class="espec">
             <p class="card-text">
               
               <strong>Motor:</strong> 150cc <br>
-              <strong>Velocidad max:</strong> 80 KM/H <br>
+              <strong>Velocidad MAX:</strong> 80 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 2 <br>
             </p>
             </div>
@@ -486,15 +508,15 @@
       <div class="col-md-4 col-lg-3 filtro-imagen scooters">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Azul-Blanco.png" class="card-img-top" alt="scooterVitalia-azul-blanco">
-          </div>
-          <div class="card-body text-cente info">
+          <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Azul-Blanco.png" class="card-img-top" alt="scooterVitalia-azul-blanco">
+        </div>
+          <div class="card-body text-center info">
             <h5 class="card-title">Italika Vitalia 150 Azul Blanco</h5>
             <div class="espec">
             <p class="card-text">
               
               <strong>Motor:</strong> 149cc <br>
-              <strong>Velocidad max:</strong> 96 KM/H <br>
+              <strong>Velocidad MAX:</strong> 96 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 2 <br>
             </p>
             </div>
@@ -507,15 +529,15 @@
       <div class="col-md-4 col-lg-3 filtro-imagen scooters">
         <div class="card mb-2 products">
           <div class="image">
-            <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Rojo-Blanco.png" class="card-img-top" alt="scooter150-azul-negro">
-          </div>
+          <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Rojo-Blanco.png" class="card-img-top" alt="scooter150-azul-negro">
+        </div>
           <div class="card-body text-center info">
             <h5 class="card-title">Italika Vitalia 150 Rojo Blanco</h5>
             <div class="espec">
             <p class="card-text">
               
               <strong>Motor:</strong> 149cc <br>
-              <strong>Velocidad max:</strong> 86 KM/H <br>
+              <strong>Velocidad MAX:</strong> 86 KM/H <br>
               <strong>Nro. de pasajeros:</strong> 2 <br>
             </p>
             </div>
@@ -547,49 +569,6 @@
   </div>
 
 
-</section>
-
-<section id="grupo" class="text-center border-bottom">
-  <h3 class="mb-2">Grupo</h3>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-4 col-lg-3">
-      <div class="card mb-2">
-        <div class="image">
-          <img src="./assets/img/mink.jpg" class="card-img-top" alt="bicicleta">
-        </div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Nombre1</h5>
-          <div class="espec">
-            <p class="card-text">
-              <strong>Edad:</strong> 29 años <br>
-              <strong>Ciudad:</strong> Cordoba <br>
-              <strong>Profesion:</strong> Analista en Ciberseguridad <br>
-            </p>
-            </div>
-        
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-lg-3">
-      <div class="card mb-2 products">
-        <div class="image">
-         <img src="./assets/img/mink2.jpg" class="card-img-top" alt="atv180">
-        </div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Nombre2</h5>
-          <div class="espec">
-          <p class="card-text">
-            <strong>Edad:</strong> 29 años <br>
-            <strong>Ciudad:</strong> Cordoba <br>
-            <strong>Profesion:</strong> Analista en Ciberseguridad <br>
-          </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </section>
 
 
@@ -647,6 +626,44 @@
 
 </section>
 
+<section id="grupo" class="text-center border-bottom">
+  <h3 class="mb-2">Creadores</h3>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4 col-lg-3">
+      <div class="card mb-2">
+        <img src="./assets/img/mink.jpg" class="card-img-top" alt="bicicleta">
+        <div class="card-body text-center">
+          <h5 class="card-title">Nombre1</h5>
+          <div class="espec">
+            <p class="card-text">
+              <strong>Edad:</strong> 29 años <br>
+              <strong>Ciudad:</strong> Cordoba <br>
+              <strong>Profesion:</strong> Analista en Ciberseguridad <br>
+            </p>
+            </div>
+        
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3">
+      <div class="card mb-2">
+        <img src="./assets/img/mink2.jpg" class="card-img-top" alt="atv180">
+        <div class="card-body text-center">
+          <h5 class="card-title">Nombre2</h5>
+          <div class="espec">
+          <p class="card-text">
+            <strong>Edad:</strong> 29 años <br>
+            <strong>Ciudad:</strong> Cordoba <br>
+            <strong>Profesion:</strong> Analista en Ciberseguridad <br>
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 <footer class="bg-light text-center text-white">
   <!-- Grid container -->
