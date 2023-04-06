@@ -87,57 +87,62 @@
                       <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step3">Vehículo</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step4">Resumen</a>
+                      <a class="nav-link disabled wz" id="tabresumen" data-bs-toggle="tab" href="#step4">Resumen</a>
                     </li>
                   </ul>
                 </div>
                 <div class="card-body">
                   <div class="row">
-                    <form>
+                    <form action="https://formspree.io/f/mgebnryg" method="POST">
                       <div class="tab-content">
                         <div class="tab-pane fade fieldset  show active" id="step1">
                           <div class="mb-3">
                             <label for="nombrecompleto" class="form-label">Nombre y Apellido:</label>
-                            <input type="text" class="form-control" id="nombrecompleto">
+                            <input type="text" name="Nombre" class="form-control" id="nombrecompleto">
+                            <label for="edad" class="form-label">Edad:</label>
+                            <input type="number" name="Edad" class="form-control" id="edad">
                             <label for="telefono" class="form-label">Teléfono:</label>
-                            <input type="tel" class="form-control" id="telefono">
+                            <input type="tel" name="Telefono" class="form-control" id="telefono">
                             <label for="mail" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="mail">
+                            <input type="email" name="Email" class="form-control" id="mail">
                             <label for="direccion" class="form-label">Dirección de hospedaje:</label>
-                            <input type="text" class="form-control" id="direccion">
+                            <input type="text" name="Direccion" class="form-control" id="direccion">
                           </div>
                           <button type="button" class="btn btn-primary nbtnext">Siguiente</button>
                         </div>
                         <div class="tab-pane fade fieldset" id="step2">
                           <div class="mb-3">
                             <label class="form-label" for="fecha-hora-i">Día y hora de inicio:</label>
-                            <input type="datetime-local" class="form-control" id="fecha-hora-i">
+                            <input type="datetime-local" name="Fecha inicio" class="form-control" id="fecha-hora-i">
                             <label class="form-label" for="fecha-hora-f">Día y hora de fin:</label>
-                            <input type="datetime-local" id="fecha-hora-f" class="form-control">
+                            <input type="datetime-local" name="Fecha fin" id="fecha-hora-f" class="form-control">
                         
                             <div class="mb-3">
                               <label class="form-label">Forma de entrega</label>
                               <div>
                               <div class="form-check">
                                 <label class="form-check-label" for="delivery">Delivery</label>
-                                <input class="form-check-input" name="entrega" type="radio" value="delivery" id="delivery">
+                                <input class="form-check-input" name="Entrega" type="radio" value="delivery" id="delivery">
                               </div>
                               <div class="form-check">
                                 <label class="form-check-label" for="local">Entrega en el local</label>
-                                <input class="form-check-input" name="entrega" type="radio" value="local" id="local">
+                                <input class="form-check-input" name="Entrega" type="radio" value="local" id="local">
                               </div>
                             </div>
                           </div>
 
                           <div class="mb-3">
                             <label class="form-label">Cantidad de personas:</label>
-                            <select class="form-select" id="selectcant" aria-label="Cantidad de personas:">
+                            <select name="Nro. de personas" class="form-select" id="selectcant" aria-label="Cantidad de personas:">
                               <option selected>Seleccione la cantidad de personas</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
                             </select>
                           </div>
-                            
+                          <div class="mb-3">
+                          <label for="comentario" class="form-label">Comentario: </label>
+                          <textarea name="Comentario" class="form-control" id="comentario" cols="30" rows="5"></textarea>
+                        </div>
                           
                         </div>
                           <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
@@ -150,19 +155,19 @@
                               <div class="col-lg-6">
                               <div class="mb-3">
                               <label class="form-label">Tipo de Vehículo</label>
-                              <select class="form-select" id="selecttipo" aria-label="Tipo de Vehiculo">
+                              <select class="form-select" name="Tipo de vehiculo" id="selecttipo" aria-label="Tipo de Vehiculo" disabled="true">
                                 <option selected>Seleccione el tipo:</option>
                                 <option value="bicicleta">Bicicleta</option>
                                 <option value="cuatriciclo">Cuatriciclo</option>
                                 <option value="buggies">Buggie</option>
-                                <option value="motocros">Motocross</option>
+                                <option value="motocross">Motocross</option>
                                 <option value="scooter">Scooter</option>
                               </select>
                             </div>
                             
                             <div class="mb-3">
                               <label class="form-label">Modelo de Vehiculo</label>
-                              <select class="form-select" id="selectvehiculo" aria-label="Vehiculo" disabled="true">
+                              <select class="form-select" name="Modelo" id="selectvehiculo" aria-label="Vehiculo" disabled="true">
                                 <option selected>Seleccione el vehiculo</option>
                                 <option value="panther">Black Panther Beach Cruiser Vintage Verde</option>
                                 <option value="molotov">Dinamo Molotov 200CC Rojo</option>
@@ -178,15 +183,15 @@
                               </select>
                             </div>
                           
-                            <div class="mb-3">
-                              <label class="form-label">Precio:</label>
+                            <div id="precio" class="mb-3">
+                              
                             </div>
-                            <div class="mb-3">
-                              <label class="form-label">Deposito: </label>
+                            <div id="deposito" class="mb-3">
+                              
                             </div>
                           </div>
                           <div id="imgselect" class="col-lg-6">
-                            <img src="./assets/img/vehiculos/dinamo-molotov-rojo1200x900.png" class="card-img-top" alt="buggie">
+                            <img id="imgselectid"src="#" class="card-img-top" alt="buggie">
                           </div>
                           
                           </div>
@@ -196,8 +201,8 @@
                           <button type="button" class="btn btn-primary nbtnext nbtend">Finalizar</button>
                         </div>
                         <div class="tab-pane fade fieldset" id="step4">
-                          <div class="mb-3">
-                          Acá va el resumen con todo lo cargado
+                          <div id="resumentext" class="mb-3">
+                            
                           </div>
                           <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
                           <button type="button" class="btn btn-primary">Exportar a PDF</button>
@@ -696,6 +701,7 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
