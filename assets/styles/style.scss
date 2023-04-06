@@ -5,16 +5,16 @@
     padding: 0;
 } 
 
-/* body{
+body{
    
-    background-image: url(../img/fondo2.jpg);
+    background-image: url(../img/disparo-vertical-palmeras-playa-arena.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     
     
-} */
+} 
 
 
 html {
@@ -149,6 +149,18 @@ iframe{
     max-height: 500px !important;
     overflow-x: hidden;
     overflow-y: auto; 
+    //overflow-y: hidden;
+  }
+
+#cotizacion
+{
+    padding-bottom: 10px;
+}
+
+.mysize2{
+    max-height: 500px !important;
+    overflow-x: hidden;
+    overflow-y: clip; 
     //overflow-y: hidden;
   }
 
