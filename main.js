@@ -62,7 +62,22 @@ $(document).ready(function() {
     });
 
 
+  $('#selectvehiculo').on('change', function(){
 
+    let imagenSeleccinada = $(this).val();
+    console.log(imagenSeleccinada);
+  });
+
+
+  $('#selectcant').change(function() {
+    
+    let valorSeleccionado = parseInt($(this).val());
+
+  if (valorSeleccionado == 2) {
+      $('#selecttipo option[value="bicicleta"]').hide()
+    }
+  });
+  
 
 
 
