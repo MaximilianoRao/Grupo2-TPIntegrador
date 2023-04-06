@@ -170,7 +170,6 @@ iframe {
 }
 
 .mysize2 {
-  max-height: 500px !important;
   overflow-x: hidden;
   overflow-y: clip;
   border-radius: 0px 30px 30px 0px;
@@ -218,15 +217,26 @@ iframe {
   border-radius: 15px;
 }
 
+.imgcarusel {
+  height: 500px;
+}
+
 @media (max-width: 382px) {
   .carousel-caption {
     bottom: 0px !important;
     position: inherit;
     left: 0px;
   }
+  .imgcarusel {
+    height: auto;
+  }
 }
 @media (max-width: 992px) {
   .nosotros {
+    margin-top: 20px;
+  }
+  .imgcarusel {
+    border-radius: 30px;
     margin-top: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

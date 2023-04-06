@@ -186,7 +186,7 @@ iframe{
 }
 
 .mysize2{
-    max-height: 500px !important;
+    //max-height: 500px !important;
     overflow-x: hidden;
     overflow-y: clip; 
     //overflow-y: hidden;
@@ -239,20 +239,36 @@ display: none;
     
 }
 
+.imgcarusel{
+    height: 500px;
+
+}
+
   @media (max-width: 382px) {
     .carousel-caption{
         bottom: 0px !important;
         position: inherit;
-        left: 0px;
-        
-       
+        left: 0px; 
     }
+    .imgcarusel{
+        height: auto;
+    
+    }
+    
 }
 
 
 @media (max-width: 992px) {
     .nosotros {
-      
       margin-top: 20px;
     }
+    .imgcarusel{
+        border-radius:30px ;
+        margin-top: 20px;
+    }
   }
+
+@media (min-width: 576px) and (max-width: 991.98px){
+
+}
+
