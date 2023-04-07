@@ -1,4 +1,6 @@
+
 $(document).ready(function() {
+  
     // agregar un controlador de eventos para cada pestaña de filtro
     $('#filtro-imagenes a').click(function() {
       
@@ -60,6 +62,40 @@ $(document).ready(function() {
        nuevaPestaña.removeClass('disabled');
        nuevaPestaña.addClass('active');
     });
+
+
+$('.exportpdf').click(function () {
+      let doc = new jsPDF();
+    let nombre = $('#nombrecompleto').val();
+    let correo = $('#mail').val();
+    let telefono = $('#telefono').val();
+    let fechai = $('#fecha-hora-i').val();
+    let datetimeParts = fechai.split('T');
+    let fecha1 = datetimeParts[0];
+    let hora1 = datetimeParts[1];
+    let fechaf = $('#fecha-hora-f').val();
+    let datetimeParts2 = fechaf.split('T');
+    let fecha2 = datetimeParts2[0];
+    let hora2 = datetimeParts2[1];
+    let fentrega = $('input[name="entrega"]:checked').prev('.form-check-label').text();
+    let cantp = $('#selectcant option:selected').text();
+    let edad = $('#edad').val();
+    let comentarios = $('#comentario').val();
+    let direccion = $('#direccion').val();
+    let tipov = $('#selecttipo option:selected').text();
+    let modelo = $('#selectvehiculo option:selected').text();
+    let precio = $('#precio').html();
+    let deposito = $('#deposito').html();
+    let imagenSrc = $('#imgselectid').attr('src');
+
+
+    doc.text("Hello world!", 10, 10);
+    
+    
+    doc.save("Cotizacion.pdf");
+
+  });
+
 
 
   $('#selectvehiculo').on('change', function(){
