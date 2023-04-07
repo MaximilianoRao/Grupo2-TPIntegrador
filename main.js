@@ -65,7 +65,8 @@ $(document).ready(function() {
 
 
 $('.exportpdf').click(function () {
-      let doc = new jsPDF();
+  window.jsPDF = window.jspdf.jsPDF;
+    let doc = new jsPDF();
     let nombre = $('#nombrecompleto').val();
     let correo = $('#mail').val();
     let telefono = $('#telefono').val();
@@ -88,11 +89,34 @@ $('.exportpdf').click(function () {
     let deposito = $('#deposito').html();
     let imagenSrc = $('#imgselectid').attr('src');
 
+    doc.setFontSize(20);
+    doc.setFont("helvetica", "bold");
+    doc.text("Resumen de reserva", 105, 25, null, null, "center");
+    
+   doc.setLineWidth(0.5);
+    doc.line(15, 33, 195, 33);
+    doc.setFontSize(15);
+    doc.setFont("helvetica", "bold");
+    doc.text("Información personal", 35, 40);
+    doc.setLineWidth(0.5);
+    doc.line(15, 43, 195, 43);
+doc.setFontSize(10);
+    doc.setFont("helvetica", "bold");
+    doc.text("Nombre y apellido:", 20, 50);
+    doc.setFont("helvetica", "normal");
+    doc.text("Nombre y apellido", 53, 50);
 
-    doc.text("Hello world!", 10, 10);
+
+
+
+
     
     
-    doc.save("Cotizacion.pdf");
+    
+    doc.text("Hello world!", 40, 0);
+    
+    
+    doc.save("Reserva.pdf");
 
   });
 
