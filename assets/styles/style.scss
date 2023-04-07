@@ -42,8 +42,8 @@ html {
         scale: 1.02;
         transition: all 0.3s linear;
     }
-    
-    .nav-tabs .nav-link.disabled, .nav-tabs .nav-link:disabled {
+    //.nav-tabs .nav-link.disabled,
+     .nav-tabs .nav-link:disabled {
         color: white;
     }
     .card-header-tabs .nav-link.active {
@@ -187,8 +187,8 @@ iframe{
     padding: 0%;
 }
 
-.sinborde{
-    border: none; 
+.sinmargin{
+    margin: 0px;
 }
 
 .mysize {
@@ -205,17 +205,26 @@ iframe{
 
 
 .mysize::-webkit-scrollbar {
-        width: 10px;
+        width: 12px;
+
       }
       
-      .card.sinborde::-webkit-scrollbar-track {
+.card.sinborde::-webkit-scrollbar-track {
         background-color: transparent;
-      }
+    }
       
-      .mysize::-webkit-scrollbar-thumb {
+.mysize::-webkit-scrollbar-thumb {
         background-color: gray;
         border-radius: 20px;
         border: 5px solid transparent;
+
+        &:hover{
+            background-color:  rgb(104, 159, 180);
+            
+            
+            border: 2px solid  rgb(240, 240, 240);
+            
+        }
       }
 
 
