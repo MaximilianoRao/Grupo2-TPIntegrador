@@ -100,11 +100,13 @@ $('.exportpdf').click(function () {
     doc.text("Información personal", 35, 40);
     doc.setLineWidth(0.5);
     doc.line(15, 43, 195, 43);
-doc.setFontSize(10);
+    doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
     doc.text("Nombre y apellido:", 20, 50);
+    doc.text("Edad:", 20, 60);
+
     doc.setFont("helvetica", "normal");
-    doc.text("Nombre y apellido", 53, 50);
+    doc.text("Nombre", 53, 50);
 
 
 
@@ -339,14 +341,14 @@ doc.setFontSize(10);
   
   
 
-    $('#resumentext').html('<h3>Resumen del formulario</h3>');
-    $('#resumentext').append('<h4>Información personal</h4>');
+    $('#resumentext').html('<h4 class="text-center">Resumen de reserva</h4>');
+    $('#resumentext').append('<h5>Información personal</h5>');
     $('#resumentext').append('<p><strong>Nombre y apellido: </strong> ' + nombre + '</p>');
     $('#resumentext').append('<p><strong>Edad:</strong> ' + edad + '</p>');
     $('#resumentext').append('<p><strong>Correo electrónico:</strong> ' + correo + '</p>');
     $('#resumentext').append('<p><strong>Teléfono: </strong> ' + telefono + '</p>');
     $('#resumentext').append('<p><strong>Teléfono: </strong> ' + direccion + '</p>');
-    $('#resumentext').append('<h4>Detalle de alquiler</h4>');
+    $('#resumentext').append('<h5>Detalle de alquiler</h5>');
     $('#resumentext').append('<p><strong>Día de inicio: </strong> ' + fecha1 + '</p>');
     $('#resumentext').append('<p><strong>Hora de inicio: </strong> ' + hora1 + '</p>');
     $('#resumentext').append('<p><strong>Día de fin: </strong> ' + fecha2 + '</p>');
@@ -354,13 +356,13 @@ doc.setFontSize(10);
     $('#resumentext').append('<p><strong>Días de alquiler: </strong> ' + calculodias(fechai,fechaf) + '</p>');
     $('#resumentext').append('<p><strong>Forma de entrega: </strong> ' + fentrega + '</p>');
     $('#resumentext').append('<p><strong>Cantidad de personas: </strong> ' + cantp + '</p>');
-    $('#resumentext').append('<h4>Detalle de vehiculo</h4>');
+    $('#resumentext').append('<h5>Detalle de vehiculo</h5>');
     $('#resumentext').append("<img src='" + imagenSrc + "' alt='Imagen del formulario'>");
     $('#resumentext').append('<p><strong>Tipo de vehículo: </strong> ' + tipov + '</p>');
     $('#resumentext').append('<p><strong>Modelo de vehículo: </strong> ' + modelo + '</p>');
     $('#resumentext').append(precio);
     $('#resumentext').append(deposito);
-    $('#resumentext').append('<h4>Comentarios</h4>');
+    $('#resumentext').append('<h5>Comentarios</h5>');
     $('#resumentext').append('<p>'+ comentarios + '</p>');
 
 
