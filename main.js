@@ -347,7 +347,7 @@ $('.exportpdf').click(function () {
     $('#resumentext').append('<p><strong>Edad:</strong> ' + edad + '</p>');
     $('#resumentext').append('<p><strong>Correo electrónico:</strong> ' + correo + '</p>');
     $('#resumentext').append('<p><strong>Teléfono: </strong> ' + telefono + '</p>');
-    $('#resumentext').append('<p><strong>Teléfono: </strong> ' + direccion + '</p>');
+    $('#resumentext').append('<p><strong>Dirección: </strong> ' + direccion + '</p>');
     $('#resumentext').append('<h5><u>Detalle de alquiler</u></h5>');
     $('#resumentext').append('<p><strong>Día de inicio: </strong> ' + fecha1 + '</p>');
     $('#resumentext').append('<p><strong>Hora de inicio: </strong> ' + hora1 + '</p>');
