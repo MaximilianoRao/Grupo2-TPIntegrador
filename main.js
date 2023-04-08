@@ -342,13 +342,13 @@ $('.exportpdf').click(function () {
   
 
     $('#resumentext').html('<h4 class="text-center">Resumen de reserva</h4>');
-    $('#resumentext').append('<h5>Información personal</h5>');
+    $('#resumentext').append('<h5><u>Información personal</u></h5>');
     $('#resumentext').append('<p><strong>Nombre y apellido: </strong> ' + nombre + '</p>');
     $('#resumentext').append('<p><strong>Edad:</strong> ' + edad + '</p>');
     $('#resumentext').append('<p><strong>Correo electrónico:</strong> ' + correo + '</p>');
     $('#resumentext').append('<p><strong>Teléfono: </strong> ' + telefono + '</p>');
     $('#resumentext').append('<p><strong>Teléfono: </strong> ' + direccion + '</p>');
-    $('#resumentext').append('<h5>Detalle de alquiler</h5>');
+    $('#resumentext').append('<h5><u>Detalle de alquiler</u></h5>');
     $('#resumentext').append('<p><strong>Día de inicio: </strong> ' + fecha1 + '</p>');
     $('#resumentext').append('<p><strong>Hora de inicio: </strong> ' + hora1 + '</p>');
     $('#resumentext').append('<p><strong>Día de fin: </strong> ' + fecha2 + '</p>');
@@ -356,13 +356,13 @@ $('.exportpdf').click(function () {
     $('#resumentext').append('<p><strong>Días de alquiler: </strong> ' + calculodias(fechai,fechaf) + '</p>');
     $('#resumentext').append('<p><strong>Forma de entrega: </strong> ' + fentrega + '</p>');
     $('#resumentext').append('<p><strong>Cantidad de personas: </strong> ' + cantp + '</p>');
-    $('#resumentext').append('<h5>Detalle de vehiculo</h5>');
+    $('#resumentext').append('<h5><u>Detalle de vehiculo</u></h5>');
     $('#resumentext').append("<img src='" + imagenSrc + "' alt='Imagen del formulario'>");
     $('#resumentext').append('<p><strong>Tipo de vehículo: </strong> ' + tipov + '</p>');
     $('#resumentext').append('<p><strong>Modelo de vehículo: </strong> ' + modelo + '</p>');
     $('#resumentext').append(precio);
     $('#resumentext').append(deposito);
-    $('#resumentext').append('<h5>Comentarios</h5>');
+    $('#resumentext').append('<h5><u>Comentarios</u></h5>');
     $('#resumentext').append('<p>'+ comentarios + '</p>');
 
 
