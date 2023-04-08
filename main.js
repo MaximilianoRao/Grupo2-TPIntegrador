@@ -93,20 +93,59 @@ $('.exportpdf').click(function () {
     doc.setFont("helvetica", "bold");
     doc.text("Resumen de reserva", 105, 25, null, null, "center");
     
-   doc.setLineWidth(0.5);
+    doc.setLineWidth(0.5);
     doc.line(15, 33, 195, 33);
+    doc.line(15, 43, 195, 43);
+    doc.line(15, 83, 195, 83);
+    doc.line(15, 93, 195, 93);
+    doc.line(15, 147, 195, 147);
+    doc.line(15, 157, 195, 157);
+    doc.line(15, 253, 195, 253);
+    doc.line(15, 263, 195, 263);
+    
     doc.setFontSize(15);
     doc.setFont("helvetica", "bold");
     doc.text("Información personal", 35, 40);
-    doc.setLineWidth(0.5);
-    doc.line(15, 43, 195, 43);
+    doc.text("Detalle de alquiler", 35, 90);
+    doc.text("Detalle de vehículo", 35, 154);
+    doc.text("Comentarios", 35, 260);
+    
     doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
     doc.text("Nombre y apellido:", 20, 50);
-    doc.text("Edad:", 20, 60);
-
+    doc.text("Edad:", 20, 57);
+    doc.text("Correo electrónico:", 20, 64);
+    doc.text("Telefono:", 20, 71);
+    doc.text("Dirección de hospedaje:", 20, 78);
+    doc.text("Día de inicio:", 20, 100);
+    doc.text("Hora de inicio:", 20, 107);
+    doc.text("Día de fin:", 20, 114);
+    doc.text("Hora de fin:", 20, 121);
+    doc.text("Días de alquiler:", 20, 128);
+    doc.text("Forma de entrega:", 20, 135);
+    doc.text("Cantidad de personas:", 20, 142);
+    doc.addImage("examples/images/Octonyan.jpg", "JPEG", 55, 164, 100, 70);
+    doc.text("Tipo de vehículo:", 20, 241);
+    doc.text("Modelo:", 20, 248);
+    
+    
     doc.setFont("helvetica", "normal");
-    doc.text("Nombre", 53, 50);
+    doc.text(nombre, 53, 50);
+    doc.text(edad, 31, 57);
+    doc.text(correo, 53, 64);
+    doc.text(telefono, 37, 71);
+    doc.text("Dirección de hospedaje:", 62, 78);
+    doc.text("Día de inicio:", 43, 100);
+    doc.text("Hora de inicio:", 45.5, 107);
+    doc.text("Día de fin:", 38, 114);
+    doc.text("Hora de fin:", 40.5, 121);
+    doc.text("Días de alquiler:", 48, 128);
+    doc.text("Forma de entrega:", 51.5, 135);
+    doc.text("Cantidad de personas:", 59, 142);
+    doc.text("Tipo de vehículo", 50, 241);
+    doc.text("Modelo:", 34.5, 248);
+    doc.text("Modeloasdasdadsasdasdasdas", 20, 270);
+
 
 
 
@@ -115,7 +154,7 @@ $('.exportpdf').click(function () {
     
     
     
-    doc.text("Hello world!", 40, 0);
+  
     
     
     doc.save("Reserva.pdf");
@@ -356,7 +395,7 @@ $('.exportpdf').click(function () {
     $('#resumentext').append('<p><strong>Días de alquiler: </strong> ' + calculodias(fechai,fechaf) + '</p>');
     $('#resumentext').append('<p><strong>Forma de entrega: </strong> ' + fentrega + '</p>');
     $('#resumentext').append('<p><strong>Cantidad de personas: </strong> ' + cantp + '</p>');
-    $('#resumentext').append('<h5><u>Detalle de vehiculo</u></h5>');
+    $('#resumentext').append('<h5><u>Detalle de vehículo</u></h5>');
     $('#resumentext').append("<img src='" + imagenSrc + "' alt='Imagen del formulario'>");
     $('#resumentext').append('<p><strong>Tipo de vehículo: </strong> ' + tipov + '</p>');
     $('#resumentext').append('<p><strong>Modelo de vehículo: </strong> ' + modelo + '</p>');
