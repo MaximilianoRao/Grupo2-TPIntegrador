@@ -85,8 +85,8 @@ $('.exportpdf').click(function () {
     let direccion = $('#direccion').val();
     let tipov = $('#selecttipo option:selected').text();
     let modelo = $('#selectvehiculo option:selected').text();
-    let precio = $('#precio').html();
-    let deposito = $('#deposito').html();
+    let precio = $('#precio').text().substring(9);
+    let deposito = $('#deposito').text().substring(12);
     let imagenSrc = $('#imgselectid').attr('src');
 
     doc.setFontSize(20);
