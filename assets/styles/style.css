@@ -7,10 +7,23 @@
 
 body {
   background-image: url(../img/disparo-vertical-palmeras-playa-arena.jpg);
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1; /* color negro semitransparente */
 }
 
 html {
@@ -42,8 +55,16 @@ section,
   transition: all 0.2s linear;
 }
 .navbar .nav-link:hover {
-  color: black;
+  color: rgba(98, 199, 185, 0.8);
   transition: all 0.2s linear;
+}
+
+.navbar {
+  --bs-navbar-toggler-border-color: rgb(255 255 255);
+}
+
+.navbar-toggler-icon {
+  filter: saturate(0) brightness(200%) hue-rotate(0deg) invert(1);
 }
 
 .form-control:focus {
@@ -103,6 +124,10 @@ section,
 .card.cotizador:hover {
   transition: all 0.3s linear;
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+.card-header {
+  border-bottom: 0px;
 }
 
 .integrantes {
