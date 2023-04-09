@@ -432,7 +432,7 @@ return dias;
  });
 
 
-let maxCaracteres = 50; // máximo de caracteres por línea
+let maxCaracteres = 109; // máximo de caracteres por línea
 function textoxlinea(comentarioUsr){
 const palabras = comentarioUsr.split(' ');
 let lineas = [];
