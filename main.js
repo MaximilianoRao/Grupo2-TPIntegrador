@@ -151,7 +151,9 @@ $('.exportpdf').click(function () {
    //doc.text(comentarios, 20, 284);
     doc.text(20, 284, comentarios, { lineHeightFactor: 1.5, multiline: true });
     
-    doc.save("Reserva.pdf");
+
+
+    doc.save('"Reserva'+fecha1+'.pdf"');
 
   });
 
@@ -390,7 +392,7 @@ $('.exportpdf').click(function () {
     $('#resumentext').append('<p><strong>Forma de entrega: </strong> ' + fentrega + '</p>');
     $('#resumentext').append('<p><strong>Cantidad de personas: </strong> ' + cantp + '</p>');
     $('#resumentext').append('<h5><u>Detalle de vehículo</u></h5>');
-    $('#resumentext').append("<img src='" + imagenSrc + "' alt='Imagen del formulario'>");
+    $('#resumentext').append("<img class='col-10 offset-1' src='" + imagenSrc + "' alt='Imagen del formulario'>");
     $('#resumentext').append('<p><strong>Tipo de vehículo: </strong> ' + tipov + '</p>');
     $('#resumentext').append('<p><strong>Modelo de vehículo: </strong> ' + modelo + '</p>');
     $('#resumentext').append(precio);
