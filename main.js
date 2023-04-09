@@ -100,15 +100,15 @@ $('.exportpdf').click(function () {
     doc.line(15, 93, 195, 93);
     doc.line(15, 147, 195, 147);
     doc.line(15, 157, 195, 157);
-    doc.line(15, 267, 195, 267);
-    doc.line(15, 277, 195, 277);
+    doc.line(15, 263, 195, 263);
+    doc.line(15, 273, 195, 273);
     
     doc.setFontSize(15);
     doc.setFont("helvetica", "bold");
     doc.text("Información personal", 35, 40);
     doc.text("Detalle de alquiler", 35, 90);
     doc.text("Detalle de vehículo", 35, 154);
-    doc.text("Comentarios", 35, 274);
+    doc.text("Comentarios", 35, 270);
     
     doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
@@ -126,14 +126,14 @@ $('.exportpdf').click(function () {
     doc.text("Cantidad de personas:", 20, 142);
     modelovehiculo = $('#selectvehiculo option:selected').val();
     if(modelovehiculo == "panther" || modelovehiculo == "molotov" || modelovehiculo == "atv180" || modelovehiculo == "atv200"){
-      doc.addImage(imagenSrc, "PNG", 55, 164, 100, 70);
+      doc.addImage(imagenSrc, "PNG", 55, 160, 100, 70);
     }else{
-      doc.addImage(imagenSrc, "PNG", 70, 164, 70, 70);
+      doc.addImage(imagenSrc, "PNG", 70, 160, 70, 70);
     }
-    doc.text("Tipo de vehículo:", 20, 241);
-    doc.text("Modelo:", 20, 248);
-    doc.text("Precio:", 20, 255);
-    doc.text("Depósito:", 20, 262);
+    doc.text("Tipo de vehículo:", 20, 237);
+    doc.text("Modelo:", 20, 244);
+    doc.text("Precio:", 20, 251);
+    doc.text("Depósito:", 20, 258);
     
     
     doc.setFont("helvetica", "normal");
@@ -149,12 +149,12 @@ $('.exportpdf').click(function () {
     doc.text(String(calculodias(fechai,fechaf)), 48, 128);
     doc.text(fentrega, 51.5, 135);
     doc.text(cantp, 59, 142);
-    doc.text(tipov, 50, 241);
-    doc.text(modelo, 34.5, 248);
-    doc.text(precio, 33, 255);
-    doc.text(deposito, 37, 262);
+    doc.text(tipov, 50, 237);
+    doc.text(modelo, 34.5, 244);
+    doc.text(precio, 33, 251);
+    doc.text(deposito, 37, 258);
    //doc.text(comentarios, 20, 284);
-    doc.text(20, 284, comentarios, { lineHeightFactor: 1.5, multiline: true });
+    doc.text(20, 280, comentarios, { lineHeightFactor: 1.5, multiline: true });
     
 
 
