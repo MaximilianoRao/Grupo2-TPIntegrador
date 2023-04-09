@@ -78,10 +78,10 @@ $('.exportpdf').click(function () {
     let datetimeParts2 = fechaf.split('T');
     let fecha2 = datetimeParts2[0];
     let hora2 = datetimeParts2[1];
-    let fentrega = $('input[name="entrega"]:checked').prev('.form-check-label').text();
+    let fentrega = $('input[name="Entrega"]:checked').prev('.form-check-label').text();
     let cantp = $('#selectcant option:selected').text();
     let edad = $('#edad').val();
-    let comentarios = $('#comentario').val();
+    let comentarios = textoxlinea($('#comentario').val());
     let direccion = $('#direccion').val();
     let tipov = $('#selecttipo option:selected').text();
     let modelo = $('#selectvehiculo option:selected').text();
@@ -100,15 +100,15 @@ $('.exportpdf').click(function () {
     doc.line(15, 93, 195, 93);
     doc.line(15, 147, 195, 147);
     doc.line(15, 157, 195, 157);
-    doc.line(15, 253, 195, 253);
-    doc.line(15, 263, 195, 263);
+    doc.line(15, 267, 195, 267);
+    doc.line(15, 277, 195, 277);
     
     doc.setFontSize(15);
     doc.setFont("helvetica", "bold");
     doc.text("Información personal", 35, 40);
     doc.text("Detalle de alquiler", 35, 90);
     doc.text("Detalle de vehículo", 35, 154);
-    doc.text("Comentarios", 35, 260);
+    doc.text("Comentarios", 35, 274);
     
     doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
@@ -124,9 +124,11 @@ $('.exportpdf').click(function () {
     doc.text("Días de alquiler:", 20, 128);
     doc.text("Forma de entrega:", 20, 135);
     doc.text("Cantidad de personas:", 20, 142);
-    doc.addImage("examples/images/Octonyan.jpg", "JPEG", 55, 164, 100, 70);
+    doc.addImage(imagenSrc, "PNG", 55, 164, 100, 70);
     doc.text("Tipo de vehículo:", 20, 241);
     doc.text("Modelo:", 20, 248);
+    doc.text("Precio:", 20, 255);
+    doc.text("Depósito:", 20, 262);
     
     
     doc.setFont("helvetica", "normal");
@@ -134,28 +136,20 @@ $('.exportpdf').click(function () {
     doc.text(edad, 31, 57);
     doc.text(correo, 53, 64);
     doc.text(telefono, 37, 71);
-    doc.text("Dirección de hospedaje:", 62, 78);
-    doc.text("Día de inicio:", 43, 100);
-    doc.text("Hora de inicio:", 45.5, 107);
-    doc.text("Día de fin:", 38, 114);
-    doc.text("Hora de fin:", 40.5, 121);
-    doc.text("Días de alquiler:", 48, 128);
-    doc.text("Forma de entrega:", 51.5, 135);
-    doc.text("Cantidad de personas:", 59, 142);
-    doc.text("Tipo de vehículo", 50, 241);
-    doc.text("Modelo:", 34.5, 248);
-    doc.text("Modeloasdasdadsasdasdasdas", 20, 270);
-
-
-
-
-
-
-    
-    
-    
-  
-    
+    doc.text(direccion, 62, 78);
+    doc.text(fecha1, 43, 100);
+    doc.text(hora1, 45.5, 107);
+    doc.text(fecha2, 38, 114);
+    doc.text(hora2, 40.5, 121);
+    doc.text(calculodias(fechai,fechaf), 48, 128);
+    doc.text(fentrega, 51.5, 135);
+    doc.text(cantp, 59, 142);
+    doc.text(tipov, 50, 241);
+    doc.text(modelo, 34.5, 248);
+    doc.text(precio, 33, 255);
+    doc.text(deposito, 37, 262);
+   //doc.text(comentarios, 20, 284);
+    doc.text(20, 284, comentarios, { lineHeightFactor: 1.5, multiline: true });
     
     doc.save("Reserva.pdf");
 
@@ -365,7 +359,7 @@ $('.exportpdf').click(function () {
     let datetimeParts2 = fechaf.split('T');
     let fecha2 = datetimeParts2[0];
     let hora2 = datetimeParts2[1];
-    let fentrega = $('input[name="entrega"]:checked').prev('.form-check-label').text();
+    let fentrega = $('input[name="Entrega"]:checked').prev('.form-check-label').text();
     let cantp = $('#selectcant option:selected').text();
     let edad = $('#edad').val();
     let comentarios = $('#comentario').val();
@@ -437,7 +431,30 @@ return dias;
     
  });
 
-  });
+
+let maxCaracteres = 50; // máximo de caracteres por línea
+function textoxlinea(comentarioUsr){
+const palabras = comentarioUsr.split(' ');
+let lineas = [];
+let currentLine = '';
+
+palabras.forEach(palabra => {
+  if (currentLine.length + palabra.length < maxCaracteres) {
+    currentLine += palabra + ' ';
+  } else {
+    lineas.push(currentLine.trim());
+    currentLine = palabra + ' ';
+  }
+});
+
+if (currentLine.length > 0) {
+  lineas.push(currentLine.trim());
+}
+
+return (lineas.join('\n'))
+}
+
+});
 
   
 
