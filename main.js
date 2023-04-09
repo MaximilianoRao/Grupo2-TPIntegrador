@@ -128,7 +128,7 @@ $('.exportpdf').click(function () {
     if(modelovehiculo == "panther" || modelovehiculo == "molotov" || modelovehiculo == "atv180"){
       doc.addImage(imagenSrc, "PNG", 55, 164, 100, 70);
     }else{
-      doc.addImage(imagenSrc, "PNG", 55, 164, 70, 70);
+      doc.addImage(imagenSrc, "PNG", 70, 164, 70, 70);
     }
     doc.text("Tipo de vehículo:", 20, 241);
     doc.text("Modelo:", 20, 248);
