@@ -141,7 +141,7 @@ $('.exportpdf').click(function () {
     doc.text(hora1, 45.5, 107);
     doc.text(fecha2, 38, 114);
     doc.text(hora2, 40.5, 121);
-    doc.text(toString(calculodias(fechai,fechaf)), 48, 128);
+    doc.text(String(calculodias(fechai,fechaf)), 48, 128);
     doc.text(fentrega, 51.5, 135);
     doc.text(cantp, 59, 142);
     doc.text(tipov, 50, 241);
