@@ -233,6 +233,7 @@ iframe {
 
 .sinmargin {
   margin: 0px;
+  padding-bottom: 0px;
 }
 
 .mysize {
@@ -244,6 +245,8 @@ iframe {
   max-height: 390px !important;
   overflow-x: hidden;
   overflow-y: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .mysize3::-webkit-scrollbar {
