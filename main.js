@@ -429,14 +429,25 @@ return dias;
 
 
 
-  $('form').on('submit', function() {
+  /* $('form').on('submit', function() {
     // Reinicia el formulario
     setTimeout(function() {
-      $('form')[0].reset(); // espera 500ms antes de reiniciar el formulario
-    },10);
+      if($(this).parent().attr('id') == "cform"){
+        $('#cform')[0].reset();
+        alert("¡Reserva confirmada!");
+      }else{
+        $('#rform')[0].reset();    
+      }
+    },100);
+ }); */
 
-    
- });
+ $('form').submit(function(event) {
+  event.preventDefault();
+  $.post($(this).attr('action'), $(this).serialize(), function() {
+    alert('Gracias por enviar el formulario!');
+    $('form')[0].reset(); // Resetea el formulario
+  });
+});
 
 
 let maxCaracteres = 109; // máximo de caracteres por línea

@@ -93,7 +93,7 @@
                 </div>
                 <div class="mysize3 card-body">
                   <div class="row">
-                    <form action="https://formspree.io/f/mgebnryg" method="POST">
+                    <form id="rform" action="https://formspree.io/f/mgebnryg" method="POST">
                       <div class="tab-content">
                         <div class="tab-pane fade fieldset  show active" id="step1">
                           <div class="mb-3">
@@ -586,30 +586,29 @@
    
 
     <div class="col-lg-6 contacto">
-      <form class="text-white">
-        
+      <form id="cform" class="text-white" action="https://formspree.io/f/xjvdpbvo" method="post" >
         <div class="mb-3">
           <label for="nombre1" class="form-label">Nombre y Apellido</label>
-          <input type="text" class="form-control" id="nombre1">
+          <input name="cnombre" type="text" class="form-control" id="nombre1">
         </div>
         
         <div class="mb-3">
           <label for="email1" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email1" aria-describedby="emailHelp">
+          <input name="cemail" type="email" class="form-control" id="email1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
           <label for="telefono1" class="form-label">Teléfono</label>
-          <input type="tel" class="form-control" id="telefono">
+          <input name="ctelefono" type="tel" class="form-control" id="telefono1">
         </div>
         <div class="mb-3">
           <label for="asunto1" class="form-label">Asunto</label>
-          <input type="text" class="form-control" id="asunto1">
+          <input name="asunto" type="text" class="form-control" id="asunto1">
         </div>
         <div class="mb-3">
           <label for="mensaje" class="form-label">Mensaje</label>
           <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="5"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button id="cenviar" type="submit" class="btn btn-success">Enviar</button>
       </form>
     </div>
     <div class="col-lg-5  offset-lg-1 pt-4 nosotros">
