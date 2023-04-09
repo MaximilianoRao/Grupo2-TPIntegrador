@@ -125,7 +125,7 @@ $('.exportpdf').click(function () {
     doc.text("Forma de entrega:", 20, 135);
     doc.text("Cantidad de personas:", 20, 142);
     modelovehiculo = $('#selectvehiculo option:selected').val();
-    if(modelovehiculo == "panther" || modelovehiculo == "molotov" || modelovehiculo == "atv180"){
+    if(modelovehiculo == "panther" || modelovehiculo == "molotov" || modelovehiculo == "atv180" || modelovehiculo == "atv200"){
       doc.addImage(imagenSrc, "PNG", 55, 164, 100, 70);
     }else{
       doc.addImage(imagenSrc, "PNG", 70, 164, 70, 70);
@@ -158,7 +158,7 @@ $('.exportpdf').click(function () {
     
 
 
-    doc.save('"Reserva'+fecha1+'.pdf"');
+    doc.save('Reserva'+fecha1+'.pdf');
 
   });
 
