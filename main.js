@@ -124,7 +124,12 @@ $('.exportpdf').click(function () {
     doc.text("Días de alquiler:", 20, 128);
     doc.text("Forma de entrega:", 20, 135);
     doc.text("Cantidad de personas:", 20, 142);
-    doc.addImage(imagenSrc, "PNG", 55, 164, 100, 70);
+    modelovehiculo = $('#selectvehiculo option:selected').val();
+    if(modelovehiculo == "panther" || modelovehiculo == "molotov" || modelovehiculo == "atv180"){
+      doc.addImage(imagenSrc, "PNG", 55, 164, 100, 70);
+    }else{
+      doc.addImage(imagenSrc, "PNG", 55, 164, 70, 70);
+    }
     doc.text("Tipo de vehículo:", 20, 241);
     doc.text("Modelo:", 20, 248);
     doc.text("Precio:", 20, 255);
