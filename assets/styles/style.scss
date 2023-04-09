@@ -21,7 +21,11 @@ html {
     scroll-behavior: smooth;
     }
     
-    
+    section,
+    .titulos{
+        padding: 10px 0px;
+    }
+
     .btn-primary {
         background: rgb(98, 199, 185);
         border: rgb(98, 199, 185);
@@ -34,6 +38,16 @@ html {
         &:active {
             background-color: rgb(104, 159, 180) !important;
             font-size: 18px;
+        }
+    }
+
+    .navbar .nav-link {
+        color: white;
+        transition: all 0.2s linear;
+        &:hover {
+            color: black;
+            // font-weight: 600;
+            transition: all 0.2s linear;
         }
     }
     
@@ -52,6 +66,10 @@ html {
         scale: 1.02;
         transition: all 0.3s linear;
     }   
+
+    .card-header {
+        padding: 0px;
+    }
 
     .wz {
         background-color: rgba(0, 0, 0, 0.49) !important;
@@ -160,10 +178,22 @@ iframe{
 
 .facebook{
     background-color: #3b5998;
+    transition: all 0.2s linear;
+    &:hover {
+        background-color: #3b5998;
+        transition: all 0.2s linear;
+        box-shadow: 0px 0px 10px rgb(255 255 255 / 100%);
+    }
 }
 
 .instagram {
     background-color: #ac2bac;
+    transition: all 0.2s linear;
+    &:hover {
+        background-color: #ac2bac;
+        transition: all 0.2s linear;
+        box-shadow: 0px 0px 10px rgb(255 255 255 / 100%);
+    }
 }
 .footer-icono{  
     border-radius: 50%; 
@@ -171,10 +201,17 @@ iframe{
 
 .copyright{
     background-color: rgba(0, 0, 0, 0.2);
+    font-weight: 600;
 }
 
 .google{
     background-color: #dd4b39;
+    transition: all 0.2s linear;
+    &:hover {
+        background-color: #dd4b39;
+        transition: all 0.2s linear;
+        box-shadow: 0px 0px 10px rgb(255 255 255 / 100%);
+    }
 }
 .logo{
     border-radius: 50%;
@@ -281,6 +318,7 @@ display: none;
     border-radius: 50px;
     color: white;
     border-radius: 15px;
+    padding: 10px;
     
 }
 
@@ -294,6 +332,10 @@ display: none;
 .imgcarusel{
     height: 500px;
 
+}
+
+.bg-light {
+    background: rgba(0, 0, 0, 0.49) !important;
 }
 
   @media (max-width: 382px) {
