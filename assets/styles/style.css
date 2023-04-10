@@ -35,17 +35,21 @@ section,
   padding: 10px 0px;
 }
 
-.btn-primary {
-  background: rgb(98, 199, 185);
-  border: rgb(98, 199, 185);
+.btn-primary,
+.send {
+  background-color: rgba(0, 0, 0, 0.49);
+  box-shadow: 0px 0px 30px rgba(98, 199, 185, 0.8);
+  border: rgba(98, 199, 185, 0.8) solid 1px;
   transition: all 0.3s linear;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.send:hover {
   background: rgb(104, 159, 180);
-  border: rgb(104, 159, 180);
+  border: rgba(98, 199, 185, 0.8) 1px solid;
   transition: all 0.3s linear;
 }
-.btn-primary:active {
+.btn-primary:active,
+.send:active {
   background-color: rgb(104, 159, 180) !important;
   font-size: 18px;
 }
@@ -67,6 +71,9 @@ section,
   filter: saturate(0) brightness(200%) hue-rotate(0deg) invert(1);
 }
 
+.form-control {
+  padding: 0.3rem 0.75rem;
+}
 .form-control:focus {
   box-shadow: 0px 0px 30px rgba(98, 199, 185, 0.8);
   scale: 1.02;
@@ -78,6 +85,7 @@ section,
 }
 
 .card-header-tabs .nav-link.active {
+  border: rgba(98, 199, 185, 0.8) 1px solid;
   color: rgb(104, 159, 180);
   box-shadow: 0px 0px 30px rgba(98, 199, 185, 0.8);
   scale: 1.02;
@@ -94,15 +102,17 @@ section,
   transition: all 0.2s linear;
 }
 .wz:hover {
-  background: rgb(104, 159, 180);
+  background: rgb(104, 159, 180) !important;
   border-radius: 5px;
-  color: white;
+  color: white !important;
   transition: all 0.3s linear;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: white !important;
-  background-color: rgb(98, 199, 185) !important;
+  color: rgb(104, 159, 180);
+  box-shadow: 0px 0px 30px rgba(98, 199, 185, 0.8);
+  border: rgba(98, 199, 185, 0.8) 1px solid;
+  transition: all 0.3s linear;
 }
 
 .nav {
@@ -145,6 +155,7 @@ section,
   min-height: 500px;
   background-color: rgba(0, 0, 0, 0.49);
   color: white;
+  padding-bottom: 10px;
 }
 
 .filtro-imagen {
