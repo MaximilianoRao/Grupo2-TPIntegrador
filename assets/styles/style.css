@@ -119,7 +119,6 @@ section,
   color: white !important;
   transition: all 0.3s linear;
 }
-
 .wz.active {
   background: rgb(104, 159, 180) !important;
   color: white !important;

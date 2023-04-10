@@ -121,13 +121,14 @@ html {
         color: white !important;
         transition: all 0.3s linear;
     }
+    &.active {
+        background: rgb(104, 159, 180) !important;
+        color: white !important;
+        transition: all 0.2s linear !important;
+    }
 }
 
-.wz.active {
-    background: rgb(104, 159, 180) !important;
-    color: white !important;
-    transition: all 0.2s linear !important;
-}
+
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: rgb(104, 159, 180);
