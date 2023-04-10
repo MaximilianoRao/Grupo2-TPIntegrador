@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  
+    
     // agregar un controlador de eventos para cada pestaña de filtro
     $('#filtro-imagenes a').click(function() {
       
@@ -17,6 +17,7 @@ $(document).ready(function() {
       $(this).addClass('active');
      $(this).parent().siblings().find('a').removeClass('active');
     });
+
 
 
     $('.nbtnext, .nbtend').click(function () {
@@ -429,7 +430,7 @@ return dias;
 
 
 
-   $('#rform').on('submit', function() {
+  /*  $('#rform').on('submit', function() {
     // Reinicia el formulario
     setTimeout(function() {
     //  $('#cform')[0].reset();
@@ -443,12 +444,44 @@ return dias;
   setTimeout(function() {
    $('#cform')[0].reset();
   },10);
-});
+}); */
 /*  if($(this).parent().attr('id') == "cform"){
   
 }else{
     
 } */
+
+
+$('#cform').submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: "https://formspree.io/f/xjvdpbvo",
+    method: "POST",
+    data: $(this).serialize(),
+    dataType: "json"
+  }).done(function() {
+    alert("¡Gracias por contactarnos!");
+    $('#cform').trigger("reset");
+  }).fail(function() {
+    alert("Lo sentimos, hubo un error al enviar el formulario.");
+  });
+});
+
+$('#rform').submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: "https://formspree.io/f/mgebnryg",
+    method: "POST",
+    data: $(this).serialize(),
+    dataType: "json"
+  }).done(function() {
+      alert("¡Gracias por tu reserva!");
+      location.reload()
+  }).fail(function() {
+    alert("Lo sentimos, hubo un error al enviar el formulario.");
+  });
+});
+
 
 
 let maxCaracteres = 109; // máximo de caracteres por línea
@@ -472,6 +505,56 @@ if (currentLine.length > 0) {
 
 return (lineas.join('\n'))
 }
+
+clima();
+
+function clima(){
+  $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Tulum&appid=dcec7df661b1e6b0edab51d796b7339c', function(data){
+
+      //https://api.openweathermap.org/data/2.5/weather?q=Tulum&appid=dcec7df661b1e6b0edab51d796b7339c
+      console.log(data);
+
+      let ciudad = data.name;
+      let pais = data.sys.country;
+      let temp= parseInt(data.main.temp-273.15)+" °C";
+      
+
+    //$("#imgIco").attr("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
+    $('#apiclima').html('<strong>'+ciudad+'-'+pais+'</strong> ');
+    $('#apiclima').append("<img src='" + `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` + "' alt='imagen clima'>");
+    $('#apiclima').append('<strong>'+temp+'</strong>');
+    
+
+  });
+  
+}
+
+
+/* function divisas(){
+  $.getJSON('http://data.fixer.io/api/latest?access_key=RGIIipYZ4OZXgIqsHeM96Qse78TV2KCK&symbols=USD,MX', function(data){
+
+      //https://api.openweathermap.org/data/2.5/weather?q=Tulum&appid=dcec7df661b1e6b0edab51d796b7339c
+      console.log(data);
+
+      let ciudad = data.name;
+      let pais = data.sys.country;
+      let temp= parseInt(data.main.temp-273.15)+" °C";
+      
+
+    //$("#imgIco").attr("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
+    $('#apiclima').html('<strong>'+ciudad+'-'+pais+'</strong> ');
+    $('#apiclima').append("<img src='" + `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` + "' alt='imagen clima'>");
+    $('#apiclima').append('<strong>'+temp+'</strong>');
+    
+
+  });
+  
+} */
+
+
+
+
+
 
 });
 
