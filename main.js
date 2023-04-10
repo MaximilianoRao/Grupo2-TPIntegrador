@@ -452,20 +452,94 @@ return dias;
 } */
 
 
+// $('#cform').submit(function(e) {
+//   e.preventDefault();
+//   $.ajax({
+//     url: "https://formspree.io/f/xjvdpbvo",
+//     method: "POST",
+//     data: $(this).serialize(),
+//     dataType: "json"
+//   }).done(function() {
+//     alert("¡Gracias por contactarnos!");
+//     $('#cform').trigger("reset");
+//   }).fail(function() {
+//     alert("Lo sentimos, hubo un error al enviar el formulario.");
+//   });
+// });
+
 $('#cform').submit(function(e) {
   e.preventDefault();
-  $.ajax({
-    url: "https://formspree.io/f/xjvdpbvo",
-    method: "POST",
-    data: $(this).serialize(),
-    dataType: "json"
-  }).done(function() {
-    alert("¡Gracias por contactarnos!");
-    $('#cform').trigger("reset");
-  }).fail(function() {
-    alert("Lo sentimos, hubo un error al enviar el formulario.");
-  });
+  
+  // Configuración de validación
+  var constraints = {
+    cnombre: {
+      presence: { 
+        presence: true ,
+        message: "El nombre es requerido"
+        
+    }
+    
+    }
+    /* cemail: {
+      presence: { message: "El correo electrónico es requerido" },
+      email: { message: "El correo electrónico no es válido" }
+    },
+    ctelefono: {
+      presence: { message: "El telefono es requerido" },
+      length: {
+        minimum: 10,
+        message: "El telefono debe tener al menos 10 caracteres"
+      }
+    },
+    asunto: {
+      presence: { message: "El asunto es requerido" },
+      length: {
+        minimum: 5,
+        message: "El mensaje debe tener al menos 5 caracteres"
+      }
+    },
+    mensaje: {
+      presence: { message: "El mensaje es requerido" },
+      length: {
+        minimum: 10,
+        message: "El mensaje debe tener al menos 10 caracteres"
+      }
+    } */
+  };
+  
+  var options = {
+    // Mostrar todos los mensajes de error a la vez
+    fullMessages: false,
+    // Habilitar la validación en tiempo real mientras se escribe
+    live: true
+    
+  };
+  // Validar el formulario con Validate.js
+  var errors = validate($('#cform').serializeObject(), constraints, options);
+  console.log(errors);
+  // Si hay errores de validación, mostrarlos y no enviar el formulario
+  if (errors) {
+    // Iterar sobre cada campo con errores y mostrar el mensaje de error
+    $.each(errors, function(field, message) {
+      $('#' + field).siblings('.error-message').text(message);
+    });
+  } else {
+    // Enviar el formulario con AJAX
+    $.ajax({
+      url: "https://formspree.io/f/xjvdpbvo",
+      method: "POST",
+      data: $(this).serialize(),
+      dataType: "json"
+    }).done(function() {
+      alert("¡Gracias por contactarnos!");
+      $('#cform').trigger("reset");
+    }).fail(function() {
+      alert("Lo sentimos, hubo un error al enviar el formulario.");
+    });
+  }
 });
+
+
 
 $('#rform').submit(function(e) {
   e.preventDefault();
