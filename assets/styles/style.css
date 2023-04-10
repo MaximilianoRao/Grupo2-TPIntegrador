@@ -328,6 +328,10 @@ iframe {
   background: rgba(0, 0, 0, 0.49) !important;
 }
 
+.tituloheader {
+  padding-left: 10px;
+}
+
 @media (max-width: 382px) {
   .carousel-caption {
     bottom: 0px !important;
@@ -345,5 +349,8 @@ iframe {
   .imgcarusel {
     border-radius: 30px;
     margin-top: 20px;
+  }
+  .tituloheader {
+    padding-left: 0px;
   }
 }/*# sourceMappingURL=style.css.map */

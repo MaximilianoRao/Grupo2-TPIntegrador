@@ -507,20 +507,18 @@ return (lineas.join('\n'))
 }
 
 clima();
-
+divisas();
 function clima(){
   $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Tulum&appid=dcec7df661b1e6b0edab51d796b7339c', function(data){
 
-      //https://api.openweathermap.org/data/2.5/weather?q=Tulum&appid=dcec7df661b1e6b0edab51d796b7339c
-      console.log(data);
-
+      
       let ciudad = data.name;
       let pais = data.sys.country;
       let temp= parseInt(data.main.temp-273.15)+" °C";
       
 
     //$("#imgIco").attr("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
-    $('#apiclima').html('<strong>'+ciudad+'-'+pais+'</strong> ');
+    $('#apiclima').html(ciudad+'-'+pais);
     $('#apiclima').append("<img src='" + `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` + "' alt='imagen clima'>");
     $('#apiclima').append('<strong>'+temp+'</strong>');
     
@@ -530,26 +528,23 @@ function clima(){
 }
 
 
-/* function divisas(){
-  $.getJSON('http://data.fixer.io/api/latest?access_key=RGIIipYZ4OZXgIqsHeM96Qse78TV2KCK&symbols=USD,MX', function(data){
+ function divisas(){
+  $('#apidivisa').html('<strong> USD = </strong> ');
+  $('#apidivisa').append('<strong> 18.18 MXN</strong>');
 
-      //https://api.openweathermap.org/data/2.5/weather?q=Tulum&appid=dcec7df661b1e6b0edab51d796b7339c
-      console.log(data);
+  /* $.getJSON('https://api.apilayer.com/exchangerates_data/convert?to=MXN&from=USD&amount=1&apikey=RGIIipYZ4OZXgIqsHeM96Qse78TV2KCK', function(divisa){
 
-      let ciudad = data.name;
-      let pais = data.sys.country;
-      let temp= parseInt(data.main.temp-273.15)+" °C";
-      
+      let from = divisa.query.from;
+      let to = divisa.query.to;
+      let result= (divisa.result).toFixed(2);
 
-    //$("#imgIco").attr("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
-    $('#apiclima').html('<strong>'+ciudad+'-'+pais+'</strong> ');
-    $('#apiclima').append("<img src='" + `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` + "' alt='imagen clima'>");
-    $('#apiclima').append('<strong>'+temp+'</strong>');
+    $('#apidivisa').html('<strong>'+from+' = </strong> ');
+    $('#apidivisa').append('<strong> '+result+' '+to+'</strong>'); 
     
 
-  });
+  }); */
   
-} */
+}
 
 
 
