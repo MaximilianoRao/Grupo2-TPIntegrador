@@ -18,9 +18,161 @@ $(document).ready(function() {
      $(this).parent().siblings().find('a').removeClass('active');
     });
 
+    $(function() {
+      // Define las reglas de validación y los mensajes de error personalizados
+      let constraints2 = {
+    "#step1": function() {
+      return {
+        Nombre: {
+          presence:{
+            presence: true,
+            message: "^No puede estar vacio"
+          }, 
+          length: {
+            minimum: 3,
+            maximum: 50,
+            message: "^Debe tener entre 3 y 50 caracteres"
+          }
+        },
+        Email: {
+          presence:{
+            presence: true,
+            message: "^No puede estar vacio"
+          }, 
+          email: {
+            message: "^Debe ser una dirección de correo electrónico válida"
+          }
+        },
+        Telefono: {
+          presence:{
+            presence: true,
+            message: "^No puede estar vacio"
+          }, 
+          numericality:{
+            numericality: true,
+            message: "^Deben ser numeros"
+          }
+        },
+        Edad: {
+          presence:{
+            presence: true,
+            message: "^No puede estar vacio"
+          }, 
+          numericality:{
+            numericality: true,
+            message: "^Deben ser numeros"
+          }
+        },
+        
+        Direccion: {
+          presence:{
+            presence: true,
+            message: "^No puede estar vacio"
+          }, 
+          length: {
+            minimum: 3,
+            maximum: 50,
+            message: "^Debe tener entre 3 y 50 caracteres"
+          }
+        }
+      };
+    },
+    "#step2": function() {
+      return {
+    'Fecha inicio': {
+       presence:{
+            presence: true,
+            message: "^No puede estar vacio"
+          },
+     
+      },
+      'Fecha fin': {
+       presence:{
+            presence: true,
+            message: "^No puede estar vacio"
+          },
+      
+      },
+      Entrega: {
+        inclusion: {
+          within: ['delivery', 'local'],
+          message: "^Debe seleccionar una opción de entrega"
+        }
+      },
+      'Nro. de personas': {
+          inclusion: {
+            within: {"1": "1","2": "2"},
+            message: "^Debe seleccionar una opción válida"
+          }
+        },
+      
+  };
+},
 
+       
+      };
+    
+      // Agrega la validación al formulario utilizando jQuery
+      $('.nbtnext, .nbtend').click(function (){
+        
+        let id = $(this).parent().attr('id');
+        id = '#'+id;
+        
+        let paso = parseInt(id[5]);
+        //let posicion = $('.card-header-tabs .nav-item').find(".active").attr('href');
+        let nuevaposicion = '#step'+ (paso+1);
+        nuevaPestaña = $('a.nav-link[href$="'+ (paso+1) +'"]');
+        pestañaActual = $('.card-header-tabs .nav-item').find(".active")
+        let errors = validate($(id), constraints2[id]());
+        console.log(errors);
+        if (errors) {
+          // Si hay errores, evita que se envíe el formulario y muestra los errores
+          
+          
+          for (let field in errors) {
+            
+            //let posicion = errors[field][0].indexOf(' ');
+            let errorMessage = errors[field];
+           
+           
+            let errorEl = $("<div>")
+              .addClass("error-message")
+              .text(errorMessage);
+            let inputEl = $("[name='" + field + "']");
+            let existingError = inputEl.next(".error-message");
+            
+            if (existingError.length) {
+              // Si ya existe un mensaje de error, actualiza el texto del mensaje
+              existingError.text(errorMessage);
+            } else {
+              // Si no existe un mensaje de error, agrega uno nuevo
+              inputEl
+                .addClass("error")
+                .after(errorEl);
+            }
+            inputEl.on("input", function() {
+              // Cuando el usuario comienza a escribir en el campo, se elimina el mensaje de error
+              $(this)
+                .removeClass("error")
+                .next(".error-message")
+                .remove();
+            });
+          }      
+        } else {
+          pestañaActual[0].ariaSelected = false;
+          pestañaActual[0].tabIndex = -1;
+          nuevaPestaña[0].ariaSelected = true;
+          nuevaPestaña[0].tabIndex = 0;
+          $(id).removeClass('active show')
+          $(nuevaposicion).addClass('active show')
+           pestañaActual.removeClass('active');
+           nuevaPestaña.removeClass('disabled');
+           nuevaPestaña.addClass('active');
+        }
+      });
+    });
 
-    $('.nbtnext, .nbtend').click(function () {
+   /*  $('.nbtnext, .nbtend').click(function () {
       // Cambiar el nav-link activo al siguiente
       //$('#paso1-tab').next().find('a').tab('show');
       let id = $(this).parent().attr('id');
@@ -43,7 +195,7 @@ $(document).ready(function() {
         //parseInt($('.card-header-tabs .nav-item').find(".disabled").[0].attributes.href.textContent[5]);
       
       //$('.card-header-tabs .nav-item').find(".active").removeClass('active');
-    });
+    }); */
 
     $('.nbtprevius').click(function () {
       let id = $(this).parent().attr('id');
@@ -434,49 +586,49 @@ $(function() {
     cnombre: {
       presence:{
         presence: true,
-        message: "No puede estar vacio"
+        message: "^No puede estar vacio"
       }, 
       length: {
         minimum: 3,
         maximum: 50,
-        message: "Debe tener entre 3 y 50 caracteres"
+        message: "^Debe tener entre 3 y 50 caracteres"
       }
     },
     cemail: {
       presence:{
         presence: true,
-        message: "No puede estar vacio"
+        message: "^No puede estar vacio"
       }, 
       email: {
-        message: "Debe ser una dirección de correo electrónico válida"
+        message: "^Debe ser una dirección de correo electrónico válida"
       }
     },
     ctelefono: {
       presence:{
         presence: true,
-        message: "No puede estar vacio"
+        message: "^No puede estar vacio"
       }, 
       numericality:{
         numericality: true,
-        message: "Deben ser numeros"
+        message: "^Deben ser numeros"
       }
     },
     
     asunto: {
       presence:{
         presence: true,
-        message: "No puede estar vacio"
+        message: "^No puede estar vacio"
       }, 
       length: {
         minimum: 3,
         maximum: 50,
-        message: "Debe tener entre 3 y 50 caracteres"
+        message: "^Debe tener entre 3 y 50 caracteres"
       }
     },
     mensaje: {
       presence:{
         presence: true,
-        message: "No puede estar vacio"
+        message: "^No puede estar vacio"
       }, 
     }
   };
@@ -490,8 +642,8 @@ $(function() {
       event.preventDefault();
       
       for (let field in errors) {
-        let posicion = errors[field][0].indexOf(' ');
-        let errorMessage = errors[field][0].slice(posicion+1);
+        
+        let errorMessage = errors[field];
        
        
         let errorEl = $("<div>")
