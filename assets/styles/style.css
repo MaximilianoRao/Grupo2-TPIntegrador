@@ -15,6 +15,15 @@ body {
   background-size: cover;
 }
 
+textarea.error, input.error {
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+}
+
 body::before {
   content: "";
   display: block;
@@ -334,16 +343,6 @@ iframe {
   display: none;
 }
 
-label.error {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-input.error {
-  border-color: red;
-}
-
 .contacto {
   background-color: rgba(0, 0, 0, 0.65);
   border-radius: 50px;
@@ -356,6 +355,8 @@ input.error {
   background-color: rgba(0, 0, 0, 0.65);
   color: white;
   border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .imgcarusel {

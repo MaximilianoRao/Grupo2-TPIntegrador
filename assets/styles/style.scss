@@ -16,6 +16,17 @@ body{
     background-size: cover;  
 } 
 
+textarea, input{
+&.error {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+    border-color: red;
+  }
+}
+.error-message {
+    color: red;
+
+  }
+
 
 
 
@@ -367,14 +378,7 @@ display: none;
 //    // display: none;
 // }
 
-label.error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-}
-input.error {
-  border-color: red;
-}
+
 
 .contacto{
     background-color: rgba(0, 0, 0,65%);
@@ -389,6 +393,8 @@ input.error {
     background-color: rgba(0, 0, 0,65%);
     color: white;
     border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     
 }
 
