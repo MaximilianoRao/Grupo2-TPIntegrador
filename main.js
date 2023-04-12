@@ -5,7 +5,9 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     let boton = $(".bi-arrow-up-short");
-    if ($(window).scrollTop() > $(window).height() / 2) {
+    
+    if ($(window).scrollTop() > $(window).height()*1.5) {
+      
       boton.show();
     } else {
       boton.hide();
@@ -32,12 +34,21 @@ $(document).ready(function() {
 
     validate.validators.validacionCheckbox = function(value, options, key, attributes) {
         // Busca todos los checkboxes con el mismo nombre que el elemento actual
-        var checkboxes = $('.form-check-label').closest('form').find('input[name="' + key + '"]');
+        let checkboxes = $('.form-check-label').closest('form').find('input[name="' + key + '"]');
         
         // Verifica si al menos uno de los checkboxes está seleccionado
         if (!(checkboxes.is(':checked')))
               return "^Por favor, selecciona una opción";
     };
+
+    validate.validators.validacionSelect = function(value, options, key, attributes) {
+      // Busca todos los checkboxes con el mismo nombre que el elemento actual
+      let seleccionada = $('#rform').find('select[name="' + key + '"]').find(':selected');
+      
+      // Verifica si al menos uno de los checkboxes está seleccionado
+      if (seleccionada.is(':default')) 
+            return "^Por favor, selecciona una opción";
+  };
    
 
 
@@ -51,7 +62,7 @@ $(document).ready(function() {
         Nombre: {
           presence:{
             presence: true,
-            message: "^No puede estar vacio"
+            message: "^Por favor, complete este campo"
           }, 
           length: {
             minimum: 3,
@@ -62,7 +73,7 @@ $(document).ready(function() {
         Email: {
           presence:{
             presence: true,
-            message: "^No puede estar vacio"
+            message: "^Por favor, complete este campo"
           }, 
           email: {
             message: "^Debe ser una dirección de correo electrónico válida"
@@ -71,7 +82,7 @@ $(document).ready(function() {
         Telefono: {
           presence:{
             presence: true,
-            message: "^No puede estar vacio"
+            message: "^Por favor, complete este campo"
           }, 
           numericality:{
             numericality: true,
@@ -81,7 +92,7 @@ $(document).ready(function() {
         Edad: {
           presence:{
             presence: true,
-            message: "^No puede estar vacio"
+            message: "^Por favor, complete este campo"
           }, 
           numericality:{
             numericality: true,
@@ -92,7 +103,7 @@ $(document).ready(function() {
         Direccion: {
           presence:{
             presence: true,
-            message: "^No puede estar vacio"
+            message: "^Por favor, complete este campo"
           }, 
           length: {
             minimum: 3,
@@ -107,14 +118,14 @@ $(document).ready(function() {
     'Fecha inicio': {
        presence:{
             presence: true,
-            message: "^No puede estar vacio"
+            message: "^Por favor, complete este campo"
           },
      
       },
       'Fecha fin': {
        presence:{
             presence: true,
-            message: "^No puede estar vacio"
+            message: "^Por favor, complete este campo"
           },
       
       },
@@ -122,14 +133,29 @@ $(document).ready(function() {
             validacionCheckbox: true
       
     }, 
-     /* 'Nro. de personas': {
-      presence: {
-        allowEmpty: false,
-        message: "^No puede estar vacio"
-      }
-        },  */
+     'Nro. de personas': {
+      validacionSelect: true
+      
+        },  
       
   };
+
+  
+},
+"#step3": function() {
+  return {
+ 
+ 'Tipo de vehiculo': {
+  validacionSelect: true
+    },  
+  
+  Modelo: {
+      validacionSelect: true
+        }
+  
+};
+
+
 },
 
        
@@ -140,14 +166,14 @@ $(document).ready(function() {
         
         let id = $(this).parent().attr('id');
         id = '#'+id;
-        
+        console.log(id);
         let paso = parseInt(id[5]);
         //let posicion = $('.card-header-tabs .nav-item').find(".active").attr('href');
         let nuevaposicion = '#step'+ (paso+1);
         nuevaPestaña = $('a.nav-link[href$="'+ (paso+1) +'"]');
         pestañaActual = $('.card-header-tabs .nav-item').find(".active")
         let errors = validate($(id), constraints2[id]());
-        console.log(errors);
+        
         if (errors) {
           // Si hay errores, evita que se envíe el formulario y muestra los errores
           
@@ -156,7 +182,7 @@ $(document).ready(function() {
             
             //let posicion = errors[field][0].indexOf(' ');
             let errorMessage = errors[field];
-            console.log(field);
+            
 
            
            
@@ -164,8 +190,6 @@ $(document).ready(function() {
               .addClass("error-message")
               .text(errorMessage);
             let inputEl = $("[name='" + field + "']");
-            console.log(inputEl.length);
-            console.log(inputEl);
             let existingError = inputEl.next(".error-message");
             let inputs = 0;
             if(inputEl.length > 1){
@@ -180,7 +204,7 @@ $(document).ready(function() {
               existingError.text(errorMessage);
             } else {
               // Si no existe un mensaje de error, agrega uno nuevo
-              console.log(inputEl);
+              
               inputEl
                 .addClass("error")
                 .after(errorEl);
@@ -226,31 +250,6 @@ $(document).ready(function() {
         }
       });
     });
-
-   /*  $('.nbtnext, .nbtend').click(function () {
-      // Cambiar el nav-link activo al siguiente
-      //$('#paso1-tab').next().find('a').tab('show');
-      let id = $(this).parent().attr('id');
-      id = '#'+id;
-      let paso = parseInt(id[5]);
-      //let posicion = $('.card-header-tabs .nav-item').find(".active").attr('href');
-      let nuevaposicion = '#step'+ (paso+1);
-      nuevaPestaña = $('a.nav-link[href$="'+ (paso+1) +'"]');
-      pestañaActual = $('.card-header-tabs .nav-item').find(".active")
-      
-      pestañaActual[0].ariaSelected = false;
-      pestañaActual[0].tabIndex = -1;
-      nuevaPestaña[0].ariaSelected = true;
-      nuevaPestaña[0].tabIndex = 0;
-      $(id).removeClass('active show')
-      $(nuevaposicion).addClass('active show')
-       pestañaActual.removeClass('active');
-       nuevaPestaña.removeClass('disabled');
-       nuevaPestaña.addClass('active');
-        //parseInt($('.card-header-tabs .nav-item').find(".disabled").[0].attributes.href.textContent[5]);
-      
-      //$('.card-header-tabs .nav-item').find(".active").removeClass('active');
-    }); */
 
     $('.nbtprevius').click(function () {
       let id = $(this).parent().attr('id');
