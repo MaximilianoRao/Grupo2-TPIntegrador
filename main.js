@@ -1,6 +1,17 @@
 
+
+  
 $(document).ready(function() {
-    
+
+  $(window).scroll(function() {
+    let boton = $(".bi-arrow-up-short");
+    if ($(window).scrollTop() > $(window).height() / 2) {
+      boton.show();
+    } else {
+      boton.hide();
+    }
+  });
+
     // agregar un controlador de eventos para cada pestaña de filtro
     $('#filtro-imagenes a').click(function() {
       
