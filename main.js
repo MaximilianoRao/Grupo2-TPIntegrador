@@ -18,8 +18,14 @@ $(document).ready(function() {
      $(this).parent().siblings().find('a').removeClass('active');
     });
 
+
+    
+
+
+
+
     $(function() {
-      // Define las reglas de validación y los mensajes de error personalizados
+      
       let constraints2 = {
     "#step1": function() {
       return {
@@ -93,18 +99,18 @@ $(document).ready(function() {
           },
       
       },
-      Entrega: {
-        inclusion: {
-          within: ['delivery', 'local'],
-          message: "^Debe seleccionar una opción de entrega"
-        }
+     Entrega: {
+      presence:{
+        presence: true,
+        message: "^No puede estar vacio"
       },
-      'Nro. de personas': {
+        },
+     'Nro. de personas': {
           inclusion: {
             within: {"1": "1","2": "2"},
             message: "^Debe seleccionar una opción válida"
           }
-        },
+        }, 
       
   };
 },
