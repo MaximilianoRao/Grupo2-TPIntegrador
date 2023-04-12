@@ -19,12 +19,20 @@ $(document).ready(function() {
     });
 
 
-    
-
-
+    validate.validators.validacionCheckbox = function(value, options, key, attributes) {
+        // Busca todos los checkboxes con el mismo nombre que el elemento actual
+        var checkboxes = $('.form-check-label').closest('form').find('input[name="' + key + '"]');
+        
+        // Verifica si al menos uno de los checkboxes está seleccionado
+        if (!(checkboxes.is(':checked')))
+              return "^Por favor, selecciona al menos una opción";
+    };
+   
 
 
     $(function() {
+
+      
       
       let constraints2 = {
     "#step1": function() {
@@ -99,17 +107,15 @@ $(document).ready(function() {
           },
       
       },
-     Entrega: {
-      presence:{
-        presence: true,
-        message: "^No puede estar vacio"
-      },
-        },
+      Entrega: {
+            validacionCheckbox: true
+      
+    }, 
      'Nro. de personas': {
-          inclusion: {
-            within: {"1": "1","2": "2"},
-            message: "^Debe seleccionar una opción válida"
-          }
+      presence: {
+        allowEmpty: false,
+        message: "^No puede estar vacio"
+      }
         }, 
       
   };
@@ -139,29 +145,61 @@ $(document).ready(function() {
             
             //let posicion = errors[field][0].indexOf(' ');
             let errorMessage = errors[field];
+            console.log(field);
+
            
            
             let errorEl = $("<div>")
               .addClass("error-message")
               .text(errorMessage);
             let inputEl = $("[name='" + field + "']");
+            console.log(inputEl.length);
+            console.log(inputEl);
             let existingError = inputEl.next(".error-message");
+            let inputs = 0;
+            if(inputEl.length > 1){
+              inputEl.splice(1);
+              inputDos = inputEl.closest('.mb-3').find('input[type="radio"]').not(inputEl);
+              inputs = 2;
+            }
+            
             
             if (existingError.length) {
               // Si ya existe un mensaje de error, actualiza el texto del mensaje
               existingError.text(errorMessage);
             } else {
               // Si no existe un mensaje de error, agrega uno nuevo
+              console.log(inputEl);
               inputEl
                 .addClass("error")
                 .after(errorEl);
+                if(inputs == 2){
+                  inputDos.addClass("error")
+                }
             }
-            inputEl.on("input", function() {
+            if(inputs == 2){
+              inputDos.on("input", function() {
+                // Cuando el usuario comienza a escribir en el campo, se elimina el mensaje de error
+                $(inputEl)
+                  .removeClass("error")
+                  .next(".error-message")
+                  .remove();
+                    inputDos.removeClass("error")
+                  
+  
+              });
+                }
+
+          inputEl.on("input", function() {
               // Cuando el usuario comienza a escribir en el campo, se elimina el mensaje de error
               $(this)
                 .removeClass("error")
                 .next(".error-message")
                 .remove();
+                if(inputs == 2){
+                  inputDos.removeClass("error")
+                }
+
             });
           }      
         } else {
