@@ -695,7 +695,7 @@ $(function() {
     cnombre: {
       presence:{
         presence: true,
-        message: "^No puede estar vacio"
+        message: "^Este campo no puede estar vacio"
       }, 
       length: {
         minimum: 3,
@@ -706,7 +706,7 @@ $(function() {
     cemail: {
       presence:{
         presence: true,
-        message: "^No puede estar vacio"
+        message: "^Este campo no puede estar vacio"
       }, 
       email: {
         message: "^Debe ser una dirección de correo electrónico válida"
@@ -715,7 +715,7 @@ $(function() {
     ctelefono: {
       presence:{
         presence: true,
-        message: "^No puede estar vacio"
+        message: "^Este campo no puede estar vacio"
       }, 
       numericality:{
         numericality: true,
@@ -726,7 +726,7 @@ $(function() {
     asunto: {
       presence:{
         presence: true,
-        message: "^No puede estar vacio"
+        message: "^Este campo no puede estar vacio"
       }, 
       length: {
         minimum: 3,
@@ -737,7 +737,7 @@ $(function() {
     mensaje: {
       presence:{
         presence: true,
-        message: "^No puede estar vacio"
+        message: "^Este campo no puede estar vacio"
       }, 
     }
   };
