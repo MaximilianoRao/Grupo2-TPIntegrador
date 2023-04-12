@@ -122,12 +122,12 @@ $(document).ready(function() {
             validacionCheckbox: true
       
     }, 
-     'Nro. de personas': {
+     /* 'Nro. de personas': {
       presence: {
         allowEmpty: false,
         message: "^No puede estar vacio"
       }
-        }, 
+        },  */
       
   };
 },
