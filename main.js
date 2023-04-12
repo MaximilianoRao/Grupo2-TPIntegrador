@@ -25,7 +25,7 @@ $(document).ready(function() {
         
         // Verifica si al menos uno de los checkboxes está seleccionado
         if (!(checkboxes.is(':checked')))
-              return "^Por favor, selecciona al menos una opción";
+              return "^Por favor, selecciona una opción";
     };
    
 
