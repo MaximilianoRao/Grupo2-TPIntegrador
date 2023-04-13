@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="./assets/styles/style.css">
   <link rel="stylesheet" href="./assets/animaciones.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <title>Moving</title>
 </head>
 
@@ -28,7 +28,7 @@
         <a href="#home" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-dark text-decoration-none">
           <img class="bi me-2 logo" src="./assets/img/cropped-cropped-LOGO-MOVING.ico" width="70" height="62" role="img"
             aria-label="Bootstrap" alt="icono">
-            <strong class="text-white tituloheader">Moving Rentals Tulum</strong>
+          <strong class="text-white tituloheader">Moving Rentals Tulum</strong>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,12 +62,12 @@
     <div class="px-3">
       <div class="container d-flex flex-wrap align-items-center justify-content-between">
         <div class="text-white" id="apidivisa">
-          
+
         </div>
         <div class="text-white" id="apiclima">
-          
+
         </div>
-       
+
 
       </div>
     </div>
@@ -75,656 +75,689 @@
 
   <section id="cotizacion" class="border-bottom">
     <div class="container">
-      
+
       <div class="row">
         <div class="col-lg-6 eliminarpadding">
           <div class="mysize">
 
-          <div class="container eliminarpadding">
-            <div class="row justify-content-center">
-              
-              <div class="card sinborde cotizador justify-content-between">
-                <h5 class="text-center sinmargin titulos">Reserva</h5>
-                <div class="card-header text-white">
-                  <ul class="nav nav-tabs card-header-tabs d-flex justify-content-center fondoform">
-                    <li class="nav-item">
-                      <!--Si cambio el active al otro step y a su ves tambien lo cambio en el form
+            <div class="container eliminarpadding">
+              <div class="row justify-content-center">
+
+                <div class="card sinborde cotizador justify-content-between">
+                  <h5 class="text-center sinmargin titulos">Reserva</h5>
+                  <div class="card-header text-white">
+                    <ul class="nav nav-tabs card-header-tabs d-flex justify-content-center fondoform">
+                      <li class="nav-item">
+                        <!--Si cambio el active al otro step y a su ves tambien lo cambio en el form
                                 se seleccionan los siguientes pasos
                             tambien se puede agregar la clase disabled para que no se puedan apretar
                           Con poner la clase disabled en la etiqueta a QUEDA DESHABILITADO-->
-                      <a class="nav-link active wz" data-bs-toggle="tab" href="#step1">Información Personal</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step2">Detalle</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step3">Vehículo</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled wz" id="tabresumen" data-bs-toggle="tab" href="#step4">Resumen</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="mysize3 card-body">
-                  <div class="row">
-                    <form id="rform">
-                      <div class="tab-content">
-                        <div class="tab-pane fade fieldset  show active" id="step1">
-                          <div class="mb-3">
-                            <label for="nombrecompleto" class="form-label">Nombre y Apellido:</label>
-                            <input type="text" name="Nombre" class="form-control" id="nombrecompleto">
-                            <label for="edad" class="form-label">Edad:</label>
-                            <input type="number" name="Edad" class="form-control" id="edad">
-                            <label for="telefono" class="form-label">Teléfono:</label>
-                            <input type="tel" name="Telefono" class="form-control" id="telefono">
-                            <label for="mail" class="form-label">Email:</label>
-                            <input type="email" name="Email" class="form-control" id="mail">
-                            <label for="direccion" class="form-label">Dirección de hospedaje:</label>
-                            <input type="text" name="Direccion" class="form-control" id="direccion">
-                          </div>
-                          <button type="button" class="btn btn-primary nbtnext">Siguiente</button>
-                        </div>
-                        <div class="tab-pane fade fieldset" id="step2">
-                          <div class="mb-3">
-                            <label class="form-label" for="fecha-hora-i">Día y hora de inicio:</label>
-                            <input type="datetime-local" name="Fecha inicio" class="form-control" id="fecha-hora-i">
-                            <label class="form-label" for="fecha-hora-f">Día y hora de fin:</label>
-                            <input type="datetime-local" name="Fecha fin" id="fecha-hora-f" class="form-control">
-                        
+                        <a class="nav-link active wz" data-bs-toggle="tab" href="#step1">Información Personal</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step2">Detalle</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled wz" data-bs-toggle="tab" href="#step3">Vehículo</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled wz" id="tabresumen" data-bs-toggle="tab" href="#step4">Resumen</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mysize3 card-body">
+                    <div class="row">
+                      <form id="rform">
+                        <div class="tab-content">
+                          <div class="tab-pane fade fieldset  show active" id="step1">
                             <div class="mb-3">
-                              <label class="form-label">Forma de entrega</label>
-                              <div>
-                              <div class="form-check">
-                                <label class="form-check-label" for="delivery">Delivery</label>
-                                <input class="form-check-input" name="Entrega" type="radio" value="delivery" id="delivery">
-                              </div>
-                              <div class="form-check">
-                                <label class="form-check-label" for="local">Entrega en el local</label>
-                                <input class="form-check-input" name="Entrega" type="radio" value="local" id="local">
-                              </div>
+                              <label for="nombrecompleto" class="form-label">Nombre y Apellido:</label>
+                              <input type="text" name="Nombre" class="form-control" id="nombrecompleto">
+                              <label for="edad" class="form-label">Edad:</label>
+                              <input type="number" name="Edad" class="form-control" id="edad">
+                              <label for="telefono" class="form-label">Teléfono:</label>
+                              <input type="tel" name="Telefono" class="form-control" id="telefono">
+                              <label for="mail" class="form-label">Email:</label>
+                              <input type="email" name="Email" class="form-control" id="mail">
+                              <label for="direccion" class="form-label">Dirección de hospedaje:</label>
+                              <input type="text" name="Direccion" class="form-control" id="direccion">
                             </div>
+                            <button type="button" class="btn btn-primary nbtnext">Siguiente</button>
                           </div>
+                          <div class="tab-pane fade fieldset" id="step2">
+                            <div class="mb-3">
+                              <label class="form-label" for="fecha-hora-i">Día y hora de inicio:</label>
+                              <input type="datetime-local" name="Fecha inicio" class="form-control" id="fecha-hora-i">
+                              <label class="form-label" for="fecha-hora-f">Día y hora de fin:</label>
+                              <input type="datetime-local" name="Fecha fin" id="fecha-hora-f" class="form-control">
 
-                          <div class="mb-3">
-                            <label class="form-label">Cantidad de personas:</label>
-                            <select name="Nro. de personas" class="form-select" id="selectcant" aria-label="Cantidad de personas:">
-                              <option selected>Seleccione la cantidad de personas</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                            </select>
-                          </div>
-                          <div class="mb-3">
-                          <label for="comentario" class="form-label">Comentario: </label>
-                          <textarea name="Comentario" class="form-control" id="comentario" cols="30" rows="5"></textarea>
-                        </div>
-                          
-                        </div>
-                          <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
-                          <button type="button" class="btn btn-primary ms-2 nbtnext">Siguiente</button>
-                        </div>
-                        
-                        <div class="tab-pane fade fieldset" id="step3">
-                          <div class="mb-3">
-                            <div class="row">
-                              <div class="col-lg-6">
                               <div class="mb-3">
-                              <label class="form-label">Tipo de Vehículo</label>
-                              <select class="form-select" name="Tipo de vehiculo" id="selecttipo" aria-label="Tipo de Vehiculo" disabled="true">
-                                <option selected>Seleccione el tipo:</option>
-                                <option value="bicicleta">Bicicleta</option>
-                                <option value="cuatriciclo">Cuatriciclo</option>
-                                <option value="buggies">Buggie</option>
-                                <option value="motocross">Motocross</option>
-                                <option value="scooter">Scooter</option>
-                              </select>
-                            </div>
-                            
-                            <div class="mb-3">
-                              <label class="form-label">Modelo de Vehiculo</label>
-                              <select class="form-select" name="Modelo" id="selectvehiculo" aria-label="Vehiculo" disabled="true">
-                                <option selected>Seleccione el vehiculo</option>
-                                <option value="panther">Black Panther Beach Cruiser Vintage Verde</option>
-                                <option value="molotov">Dinamo Molotov 200CC Rojo</option>
-                                <option value="atv180">Italika Cuatrimoto  ATV180 Verde Negro</option>
-                                <option value="atv200">Italika Cuatrimoto  ATV200 Naranja Negro</option>
-                                <option value="dm250">Italika DobleProposito DM250 X Negro</option>
-                                <option value="d125lt">Italika D125 LT Azul Negro</option>
-                                <option value="d125">Italika D125 Blanco Azul</option>
-                                <option value="d150">Italika D150 Azul Negro</option>
-                                <option value="xw150">Italika XW150 Rojo Negro</option>
-                                <option value="150azul">Italika Vitalia 150 Azul Blanco</option>
-                                <option value="150rojo">Italika Vitalia 150 Rojo Blanco</option>
-                              </select>
-                            </div>
-                          
-                            <div id="precio" class="mb-3">
-                              
-                            </div>
-                            <div id="deposito" class="mb-3">
-                              
-                            </div>
-                          </div>
-                          <div id="imgselect" class="col-lg-6">
-                            <img id="imgselectid"src="#" class="card-img-top" alt="buggie">
-                          </div>
-                          
-                          </div>
-                            
-                          </div>
-                          <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
-                          <button type="button" class="btn btn-primary nbtnext nbtend">Finalizar</button>
-                        </div>
-                        <div class="tab-pane fade fieldset" id="step4">
-                          <div id="resumentext" class="mb-3">
-                            
-                            
-                          </div>
-                          <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
-                          <button type="button" class="btn btn-primary exportpdf">Exportar a PDF</button>
-                          <button type="submit" class="btn btn-success ms-2 send">Enviar</button>
-                        </div>
-                      </div>
-                    </form>
+                                <label class="form-label">Forma de entrega</label>
+                                <div>
+                                  <div class="form-check">
+                                    <label class="form-check-label" for="delivery">Delivery</label>
+                                    <input class="form-check-input" name="Entrega" type="radio" value="delivery"
+                                      id="delivery">
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label" for="local">Entrega en el local</label>
+                                    <input class="form-check-input" name="Entrega" type="radio" value="local"
+                                      id="local">
+                                  </div>
+                                </div>
+                              </div>
 
+                              <div class="mb-3">
+                                <label class="form-label">Cantidad de personas:</label>
+                                <select name="Nro. de personas" class="form-select" id="selectcant"
+                                  aria-label="Cantidad de personas:">
+                                  <option selected>Seleccione la cantidad de personas</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                </select>
+                              </div>
+                              <div class="mb-3">
+                                <label for="comentario" class="form-label">Comentario: </label>
+                                <textarea name="Comentario" class="form-control" id="comentario" cols="30"
+                                  rows="5"></textarea>
+                              </div>
+
+                            </div>
+                            <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
+                            <button type="button" class="btn btn-primary ms-2 nbtnext">Siguiente</button>
+                          </div>
+
+                          <div class="tab-pane fade fieldset" id="step3">
+                            <div class="mb-3">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <div class="mb-3">
+                                    <label class="form-label">Tipo de Vehículo</label>
+                                    <select class="form-select" name="Tipo de vehiculo" id="selecttipo"
+                                      aria-label="Tipo de Vehiculo" disabled="true">
+                                      <option selected>Seleccione el tipo:</option>
+                                      <option value="bicicleta">Bicicleta</option>
+                                      <option value="cuatriciclo">Cuatriciclo</option>
+                                      <option value="buggies">Buggie</option>
+                                      <option value="motocross">Motocross</option>
+                                      <option value="scooter">Scooter</option>
+                                    </select>
+                                  </div>
+
+                                  <div class="mb-3">
+                                    <label class="form-label">Modelo de Vehiculo</label>
+                                    <select class="form-select" name="Modelo" id="selectvehiculo" aria-label="Vehiculo"
+                                      disabled="true">
+                                      <option selected>Seleccione el vehiculo</option>
+                                      <option value="panther">Black Panther Beach Cruiser Vintage Verde</option>
+                                      <option value="molotov">Dinamo Molotov 200CC Rojo</option>
+                                      <option value="atv180">Italika Cuatrimoto ATV180 Verde Negro</option>
+                                      <option value="atv200">Italika Cuatrimoto ATV200 Naranja Negro</option>
+                                      <option value="dm250">Italika DobleProposito DM250 X Negro</option>
+                                      <option value="d125lt">Italika D125 LT Azul Negro</option>
+                                      <option value="d125">Italika D125 Blanco Azul</option>
+                                      <option value="d150">Italika D150 Azul Negro</option>
+                                      <option value="xw150">Italika XW150 Rojo Negro</option>
+                                      <option value="150azul">Italika Vitalia 150 Azul Blanco</option>
+                                      <option value="150rojo">Italika Vitalia 150 Rojo Blanco</option>
+                                    </select>
+                                  </div>
+
+                                  <div id="precio" class="mb-3">
+
+                                  </div>
+                                  <div id="deposito" class="mb-3">
+
+                                  </div>
+                                </div>
+                                <div id="imgselect" class="col-lg-6">
+                                  <img id="imgselectid" src="#" class="card-img-top" alt="buggie">
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
+                            <button type="button" class="btn btn-primary nbtnext nbtend">Finalizar</button>
+                          </div>
+                          <div class="tab-pane fade fieldset" id="step4">
+                            <div id="resumentext" class="mb-3">
+
+
+                            </div>
+                            <button type="button" class="btn btn-primary nbtprevius">Anterior</button>
+                            <button type="button" class="btn btn-primary exportpdf">Exportar a PDF</button>
+                            <button type="submit" class="btn btn-success ms-2 send">Enviar</button>
+                          </div>
+                        </div>
+                      </form>
+
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
         <div class="col-lg-6 d-flex flex-column justify-contents-center eliminarpadding" data-aos="fade-left">
           <div class="mysize2">
-          <div class="content pt-lg-0">
-            <!--data-bs-ride="carousel" agregarlo como parametro para que pase las imagenes automaticamente
+            <div class="content pt-lg-0">
+              <!--data-bs-ride="carousel" agregarlo como parametro para que pase las imagenes automaticamente
             y se pare cuando pones el mouse encima-->
-            <div id="calesita" class="carousel slide mysize2" data-bs-ride="carousel" >
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#calesita" data-bs-slide-to="0" class=" boton-color active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" class="boton-color" data-bs-target="#calesita" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" class="boton-color" data-bs-target="#calesita" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" class="boton-color" data-bs-target="#calesita" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" class="boton-color" data-bs-target="#calesita" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <div id="calesita" class="carousel slide mysize2" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#calesita" data-bs-slide-to="0" class=" boton-color active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" class="boton-color" data-bs-target="#calesita" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" class="boton-color" data-bs-target="#calesita" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                  <button type="button" class="boton-color" data-bs-target="#calesita" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                  <button type="button" class="boton-color" data-bs-target="#calesita" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                </div>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./assets/img/Carusel/scooter-500x470.jpg" class="d-block w-100 imgcarusel" alt="...">
+                    <div class="carousel-caption d-block">
+                      <h5>Amplia variedad de MODELOS</h5>
+                      <p>No importa el tipo de viaje que desee realizar, estamos seguros de que tenemos el modelo de
+                        vehículo adecuado para usted.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/img/Carusel/bici-500x470.jpg" class="d-block w-100 imgcarusel"
+                      alt="primeraImagen">
+                    <div class="carousel-caption d-block">
+                      <h5>¿No sabes a dónde ir en Tulum?</h5>
+                      <p>¡No te preocupes! ¡Te ayudaremos a encontrar los mejores lugares para visitar!</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/img/Carusel/cuatri-500x470.jpg" class="d-block w-100 imgcarusel" alt="...">
+                    <div class="carousel-caption d-block">
+                      <h5>Opciones de entrega</h5>
+                      Elegi la forma de entrega que más se adapte a tu viaje: <br>
+                      <strong>Retiro en el local</strong>
+                      <p><strong>Delivery a cualquier punto dentro de Tulum</strong></p>
+
+
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/img/Carusel/scooter-r-500x470.jpg" class="d-block w-100 imgcarusel" alt="...">
+                    <div class="carousel-caption d-block">
+                      <h5>Viaja seguro</h5>
+                      <strong>Todas las rentas incluyen seguro:</strong> <br>
+                      Cobertura por Daños de colisión <br>
+                      Cobertura daños a terceros <br>
+                      <p>Protección parcial por robo</p>
+
+
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/img/Carusel/moto-500x470.jpg" class="d-block w-100 imgcarusel" alt="...">
+                    <div class="carousel-caption d-block">
+                      <h5>Kilometros ILIMITADOS</h5>
+                      Recorre libremente toda la ciudad
+                      <p>Solo tendrás que preocuparte de disfrutar tu viaje</p>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#calesita" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#calesita" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-              
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="./assets/img/Carusel/scooter-500x470.jpg" class="d-block w-100 imgcarusel" alt="..."> 
-                  <div class="carousel-caption d-block">
-                    <h5>Amplia variedad de MODELOS</h5>
-                    <p>No importa el tipo de viaje que desee realizar, estamos seguros de que tenemos el modelo de vehículo adecuado para usted.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/img/Carusel/bici-500x470.jpg" class="d-block w-100 imgcarusel" alt="primeraImagen">
-                  <div class="carousel-caption d-block">
-                    <h5>¿No sabes a dónde ir en Tulum?</h5>
-                    <p>¡No te preocupes! ¡Te ayudaremos a encontrar los mejores lugares para visitar!</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/img/Carusel/cuatri-500x470.jpg" class="d-block w-100 imgcarusel" alt="...">
-                  <div class="carousel-caption d-block">
-                    <h5>Opciones de entrega</h5>
-                    Elegi la forma de entrega que más se adapte a tu viaje: <br>
-                    <strong>Retiro en el local</strong>
-                    <p><strong>Delivery a cualquier punto dentro de Tulum</strong></p>
-                    
-                    
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/img/Carusel/scooter-r-500x470.jpg" class="d-block w-100 imgcarusel" alt="...">
-                  <div class="carousel-caption d-block">
-                    <h5>Viaja seguro</h5>
-                    <strong>Todas las rentas incluyen seguro:</strong> <br>
-                    Cobertura por Daños de colisión <br>
-                    Cobertura daños a terceros <br>
-                     <p>Protección parcial por robo</p>
-                    
-                
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/img/Carusel/moto-500x470.jpg" class="d-block w-100 imgcarusel" alt="...">
-                  <div class="carousel-caption d-block">
-                    <h5>Kilometros ILIMITADOS</h5>
-                    Recorre libremente toda la ciudad
-                    <p>Solo tendrás que preocuparte de disfrutar tu viaje</p>
-                  </div>
-                </div>
-              
-              </div>
-
-
-
-            
-
-              <button class="carousel-control-prev" type="button" data-bs-target="#calesita" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#calesita" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
-          </div>     
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
-  
+
   <section id="productos" class="text-center border-bottom text-white">
     <h3 class="mb-2 titulos">Catálogo</h3>
-  <div class="container">
-    <div class="row">
-</div>
+    <div class="container">
       <div class="row">
-    <div class="col">
-      <!--Sin role="tablist"-->
-  <ul class="nav nav-pills justify-content-center mb-3" id="filtro-imagenes">
-    <!--Sin role="presentation" en cada li-->
-    <li class="nav-item" >
-      <a class="nav-link active wz" id="filtro-todos" data-filter="todos" href="#!">Todos</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link wz" id="filtro-bicicletas" data-filter="bicicletas" href="#!">Bicicletas</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link wz" id="filtro-cuatriciclos" data-filter="cuatriciclos" href="#!">Cuatriciclos</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link wz" id="filtro-buggies" data-filter="buggies" href="#!">Buggies</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link wz" id="filtro-motocross" data-filter="motocross" href="#!">Motocross</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link wz" id="filtro-scooters" data-filter="scooters" href="#!">Scooters</a>
-    </li>
-  </ul>
-</div>
-</div>
-  
-    
-    <div class="row filtro-galeria justify-content-center">
-      <div class="col-md-4 col-lg-3 filtro-imagen bicicletas">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Bicicleta-Cruiser-Vintage-Dama-Canasta.png" class="card-img-top" alt="bicicleta">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Black Panther Beach Cruiser Vintage Verde</h5>
-            <div class="espec text-center">
-            <p class="card-text">
-              <strong>Nro. de velocidades:</strong> 1 <br>
-              <strong>Mat. del marco:</strong> Acero <br>
-              <strong>Llantas:</strong> Aluminio <br>
-              <strong>Nro. de pasajeros:</strong> 1 <br>
-            </p>
-          </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $150 MXN</p>
-          </div>
-        </div>
       </div>
-      <div class="col-md-4 col-lg-3 filtro-imagen buggies">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/dinamo-molotov-rojo1200x900.png" class="card-img-top" alt="buggie">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Dinamo Molotov 200CC Rojo</h5>
-            <div class="espec">
-            <p class="card-text">
-              <strong>Motor:</strong> 200cc <br>
-              <strong>Velocidad MAX:</strong> 65 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 2 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $2000 MXN</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-3 filtro-imagen cuatriciclos">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Cuatrimoto-ATV180-Verde-Negro-1200x825-1.png" class="card-img-top" alt="atv180">
-         </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika Cuatrimoto  ATV180 Verde Negro</h5>
-            <div class="espec">
-            <p class="card-text">
-              <strong>Motor:</strong> 177cc <br>
-              <strong>Velocidad MAX:</strong> 65 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 1 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $1400 MXN</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-3 filtro-imagen cuatriciclos">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Cuatrimoto-ATV200-Naranja-Negro-1200x1000-1.png" class="card-img-top" alt="atv200">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika Cuatrimoto  ATV200 Naranja Negro</h5>
-            <div class="espec">
-            <p class="card-text">
-              <strong>Motor:</strong> 200cc <br>
-              <strong>Velocidad MAX:</strong> 65 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 2 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $1800 MXN</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-3 filtro-imagen motocross">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/DobleProposito-DM250-X-Negro-1.png" class="card-img-top" alt="motocross">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika DobleProposito DM250 X Negro</h5>
-            <div class="espec">
-            <p class="card-text">
-              
-              <strong>Motor:</strong> 250cc <br>
-              <strong>Velocidad MAX:</strong> 100 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 2 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $1250 MXN</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-3 filtro-imagen scooters">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Motoneta-D125-LT-Azul-Negro.png" class="card-img-top" alt="scooter-azul-negra">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika D125 LT Azul Negro</h5>
-            <div class="espec">
-            <p class="card-text">
-              <strong>Motor:</strong> 124cc <br>
-              <strong>Velocidad MAX:</strong> 71 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 1 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              525 MXN</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-3 filtro-imagen scooters">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Motoneta-D125-Blanco-Azul.png" class="card-img-top" alt="scooter-blanco-azul">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika D125 Blanco Azul</h5>
-            <div class="espec">
-            <p class="card-text">
-              
-              <strong>Motor:</strong> 124cc <br>
-              <strong>Velocidad MAX:</strong> 7 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 1 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $525 MXN</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-lg-3 filtro-imagen scooters">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Motoneta-D150-Azul-Negro.png" class="card-img-top" alt="scooter150-azul-negro">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika D150 Azul Negro</h5>
-            <div class="espec">
-            <p class="card-text">
-              
-              <strong>Motor:</strong> 150cc <br>
-              <strong>Velocidad MAX:</strong> 90 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 2 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $700 MXN</p>
-          </div>
+      <div class="row">
+        <div class="col">
+          <!--Sin role="tablist"-->
+          <ul class="nav nav-pills justify-content-center mb-3" id="filtro-imagenes">
+            <!--Sin role="presentation" en cada li-->
+            <li class="nav-item">
+              <a class="nav-link active wz" id="filtro-todos" data-filter="todos" href="#!">Todos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link wz" id="filtro-bicicletas" data-filter="bicicletas" href="#!">Bicicletas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link wz" id="filtro-cuatriciclos" data-filter="cuatriciclos" href="#!">Cuatriciclos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link wz" id="filtro-buggies" data-filter="buggies" href="#!">Buggies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link wz" id="filtro-motocross" data-filter="motocross" href="#!">Motocross</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link wz" id="filtro-scooters" data-filter="scooters" href="#!">Scooters</a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="col-md-4 col-lg-3 filtro-imagen scooters">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Motoneta-XW150-Rojo-Negro.png" class="card-img-top" alt="scooterxw150-rojo-negro">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika XW150 Rojo Negro</h5>
-            <div class="espec">
-            <p class="card-text">
-              
-              <strong>Motor:</strong> 150cc <br>
-              <strong>Velocidad MAX:</strong> 80 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 2 <br>
-            </p>
+
+      <div class="row filtro-galeria justify-content-center">
+        <div class="col-md-4 col-lg-3 filtro-imagen bicicletas">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Bicicleta-Cruiser-Vintage-Dama-Canasta.png" class="card-img-top"
+                alt="bicicleta">
             </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $700 MXN</p>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Black Panther Beach Cruiser Vintage Verde</h5>
+              <div class="espec text-center">
+                <p class="card-text">
+                  <strong>Nro. de velocidades:</strong> 1 <br>
+                  <strong>Mat. del marco:</strong> Acero <br>
+                  <strong>Llantas:</strong> Aluminio <br>
+                  <strong>Nro. de pasajeros:</strong> 1 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $150 MXN</p>
+            </div>
           </div>
         </div>
+        <div class="col-md-4 col-lg-3 filtro-imagen buggies">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/dinamo-molotov-rojo1200x900.png" class="card-img-top" alt="buggie">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Dinamo Molotov 200CC Rojo</h5>
+              <div class="espec">
+                <p class="card-text">
+                  <strong>Motor:</strong> 200cc <br>
+                  <strong>Velocidad MAX:</strong> 65 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 2 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $2000 MXN</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 filtro-imagen cuatriciclos">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Cuatrimoto-ATV180-Verde-Negro-1200x825-1.png" class="card-img-top"
+                alt="atv180">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika Cuatrimoto ATV180 Verde Negro</h5>
+              <div class="espec">
+                <p class="card-text">
+                  <strong>Motor:</strong> 177cc <br>
+                  <strong>Velocidad MAX:</strong> 65 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 1 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $1400 MXN</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 filtro-imagen cuatriciclos">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Cuatrimoto-ATV200-Naranja-Negro-1200x1000-1.png" class="card-img-top"
+                alt="atv200">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika Cuatrimoto ATV200 Naranja Negro</h5>
+              <div class="espec">
+                <p class="card-text">
+                  <strong>Motor:</strong> 200cc <br>
+                  <strong>Velocidad MAX:</strong> 65 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 2 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $1800 MXN</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 filtro-imagen motocross">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/DobleProposito-DM250-X-Negro-1.png" class="card-img-top" alt="motocross">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika DobleProposito DM250 X Negro</h5>
+              <div class="espec">
+                <p class="card-text">
+
+                  <strong>Motor:</strong> 250cc <br>
+                  <strong>Velocidad MAX:</strong> 100 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 2 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $1250 MXN</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 filtro-imagen scooters">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Motoneta-D125-LT-Azul-Negro.png" class="card-img-top"
+                alt="scooter-azul-negra">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika D125 LT Azul Negro</h5>
+              <div class="espec">
+                <p class="card-text">
+                  <strong>Motor:</strong> 124cc <br>
+                  <strong>Velocidad MAX:</strong> 71 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 1 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                525 MXN</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 filtro-imagen scooters">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Motoneta-D125-Blanco-Azul.png" class="card-img-top"
+                alt="scooter-blanco-azul">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika D125 Blanco Azul</h5>
+              <div class="espec">
+                <p class="card-text">
+
+                  <strong>Motor:</strong> 124cc <br>
+                  <strong>Velocidad MAX:</strong> 7 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 1 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $525 MXN</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 filtro-imagen scooters">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Motoneta-D150-Azul-Negro.png" class="card-img-top"
+                alt="scooter150-azul-negro">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika D150 Azul Negro</h5>
+              <div class="espec">
+                <p class="card-text">
+
+                  <strong>Motor:</strong> 150cc <br>
+                  <strong>Velocidad MAX:</strong> 90 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 2 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $700 MXN</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3 filtro-imagen scooters">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Motoneta-XW150-Rojo-Negro.png" class="card-img-top"
+                alt="scooterxw150-rojo-negro">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika XW150 Rojo Negro</h5>
+              <div class="espec">
+                <p class="card-text">
+
+                  <strong>Motor:</strong> 150cc <br>
+                  <strong>Velocidad MAX:</strong> 80 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 2 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $700 MXN</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3 filtro-imagen scooters">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Azul-Blanco.png" class="card-img-top"
+                alt="scooterVitalia-azul-blanco">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika Vitalia 150 Azul Blanco</h5>
+              <div class="espec">
+                <p class="card-text">
+
+                  <strong>Motor:</strong> 149cc <br>
+                  <strong>Velocidad MAX:</strong> 96 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 2 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $700 MXN</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3 filtro-imagen scooters">
+          <div class="card mb-2 products">
+            <div class="image">
+              <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Rojo-Blanco.png" class="card-img-top"
+                alt="scooter150-azul-negro">
+            </div>
+            <div class="card-body text-center info">
+              <h5 class="card-title">Italika Vitalia 150 Rojo Blanco</h5>
+              <div class="espec">
+                <p class="card-text">
+
+                  <strong>Motor:</strong> 149cc <br>
+                  <strong>Velocidad MAX:</strong> 86 KM/H <br>
+                  <strong>Nro. de pasajeros:</strong> 2 <br>
+                </p>
+              </div>
+              <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
+                $700 MXN</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="col-md-4 col-lg-3 filtro-imagen scooters">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Azul-Blanco.png" class="card-img-top" alt="scooterVitalia-azul-blanco">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika Vitalia 150 Azul Blanco</h5>
-            <div class="espec">
-            <p class="card-text">
-              
-              <strong>Motor:</strong> 149cc <br>
-              <strong>Velocidad MAX:</strong> 96 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 2 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $700 MXN</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-4 col-lg-3 filtro-imagen scooters">
-        <div class="card mb-2 products">
-          <div class="image">
-          <img src="./assets/img/vehiculos/Motoneta-Vitalia-150-Rojo-Blanco.png" class="card-img-top" alt="scooter150-azul-negro">
-        </div>
-          <div class="card-body text-center info">
-            <h5 class="card-title">Italika Vitalia 150 Rojo Blanco</h5>
-            <div class="espec">
-            <p class="card-text">
-              
-              <strong>Motor:</strong> 149cc <br>
-              <strong>Velocidad MAX:</strong> 86 KM/H <br>
-              <strong>Nro. de pasajeros:</strong> 2 <br>
-            </p>
-            </div>
-            <p class="price"> <strong>PRECIO POR DÍA</strong> <br>
-              $700 MXN</p>
-          </div>
-        </div>
-      </div>
-      
+
     </div>
-  
+  </section>
 
 
-</div>
-</section>
+  <section id="ubicacion" class="text-center border-bottom text-white">
+    <h3 class="mb-3 titulos">Ubicación</h3>
+    <h5>CALLE 03 Manzana 5 Lote 4, VILLAS HURACANES, 77764 Tulum, Q.R., México</h5>
+    <div class="container">
+      <div class="row">
+
+        <iframe title="gmaps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7488.090996715536!2d-87.4551498651123!3d20.215430300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4fd7acf515282b%3A0xd05f4ca3b3ed71b6!2sTulum%20Moving%20Rentals-Atv%20Scooter%20Bike%20Razer!5e0!3m2!1ses-419!2sar!4v1680385528665!5m2!1ses-419!2sar"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-<section id="ubicacion" class="text-center border-bottom text-white">
-  <h3 class="mb-3 titulos">Ubicación</h3>
-<h5>CALLE 03 Manzana 5 Lote 4, VILLAS HURACANES, 77764 Tulum, Q.R., México</h5>
-  <div class="container">
-    <div class="row">
-      
-      <iframe title="gmaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7488.090996715536!2d-87.4551498651123!3d20.215430300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4fd7acf515282b%3A0xd05f4ca3b3ed71b6!2sTulum%20Moving%20Rentals-Atv%20Scooter%20Bike%20Razer!5e0!3m2!1ses-419!2sar!4v1680385528665!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    
-  </div>
-    
-  </div>
-
-
-</section>
-
-
-<section id="contacto" class="border-bottom">
-  <h3 class="mb-2 text-center text-white titulos">Contacto</h3>
-  <div class="container">
-  <div class="row">
-   
-
-    <div class="col-lg-6 contacto">
-      <form id="cform" class="text-white">
-        <div class="mb-3">
-          <label for="nombre1" class="form-label">Nombre y Apellido</label>
-          <input name="cnombre" type="text" class="form-control" id="nombre1">
-        </div>
-        
-        <div class="mb-3">
-          <label for="email1" class="form-label">Email</label>
-          <input name="cemail" class="form-control" id="email1">
-        </div>
-        <div class="mb-3">
-          <label for="telefono1" class="form-label">Teléfono</label>
-          <input name="ctelefono" type="tel" class="form-control" id="telefono1">
-        </div>
-        <div class="mb-3">
-          <label for="asunto1" class="form-label">Asunto</label>
-          <input name="asunto" type="text" class="form-control" id="asunto1">
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="5"></textarea>
-        </div>
-        <button id="cenviar" type="submit" class="btn btn-success send">Enviar</button>
-      </form>
-    </div>
-    <div class="col-lg-5  offset-lg-1 pt-4">
-      
-      <div class="nosotros">
-        <h4 class="text-center titulos">Nosotros</h4>
-        <p>En <strong>Moving Rentals Tulum</strong>, llevamos más de 10 años brindando servicios de alquiler de vehículos a los visitantes de nuestra hermosa región turística. Comenzamos como una pequeña empresa y hemos crecido a lo largo de los años para convertirnos en uno de los principales proveedores de alquiler de vehículos de la zona.
-        Nos esforzamos por ofrecer un servicio personalizado y amable a cada uno de nuestros clientes, y nos enorgullecemos de la calidad de nuestros vehículos.
-        Ofrecemos una amplia gama de vehículos para satisfacer las necesidades de nuestros clientes. Desde bicicletas económicas hasta vehículos todoterreno, tenemos algo para todos. También ofrecemos servicios adicionales, como la entrega y recogida de vehículos en el aeropuerto y en hoteles locales.</p>
-        <div class="text-center">
-        <h5>Horarios de atención:</h5>
-        <p>Lunes a Sabados: 8:00 - 18:00hs</p>
-        <p> <strong>Telefono:</strong> +52 999-999-0090</p>
-      </div>
       </div>
 
     </div>
-  </div>
-</div>
 
 
-</section>
+  </section>
 
-<section id="grupo" class="text-center text-white">
-  <h3 class="mb-2 titulos">Creadores</h3>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-4 col-lg-3">
-      <div class="card mb-2 integrantes">
-        <div>
-          <img src="./assets/img/perfil-maxi.jpg" class="card-img-top" alt="foto-maxi">
-        </div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Maximiliano Rao</h5>
-          <div class="espec">
-            <p class="card-text">
-              <strong>Edad:</strong> 29 años <br>
-              <strong>Ciudad:</strong> Cordoba <br>
-              <strong>Profesion:</strong> Analista en Ciberseguridad <br>
-            </p>
+
+  <section id="contacto" class="border-bottom">
+    <h3 class="mb-2 text-center text-white titulos">Contacto</h3>
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col-lg-6 contacto">
+          <form id="cform" class="text-white">
+            <div class="mb-3">
+              <label for="nombre1" class="form-label">Nombre y Apellido</label>
+              <input name="cnombre" type="text" class="form-control" id="nombre1">
             </div>
-        
+
+            <div class="mb-3">
+              <label for="email1" class="form-label">Email</label>
+              <input name="cemail" class="form-control" id="email1">
+            </div>
+            <div class="mb-3">
+              <label for="telefono1" class="form-label">Teléfono</label>
+              <input name="ctelefono" type="tel" class="form-control" id="telefono1">
+            </div>
+            <div class="mb-3">
+              <label for="asunto1" class="form-label">Asunto</label>
+              <input name="asunto" type="text" class="form-control" id="asunto1">
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="5"></textarea>
+            </div>
+            <button id="cenviar" type="submit" class="btn btn-success send">Enviar</button>
+          </form>
+        </div>
+        <div class="col-lg-5  offset-lg-1 pt-4">
+
+          <div class="nosotros">
+            <h4 class="text-center titulos">Nosotros</h4>
+            <p>En <strong>Moving Rentals Tulum</strong>, llevamos más de 10 años brindando servicios de alquiler de
+              vehículos a los visitantes de nuestra hermosa región turística. Comenzamos como una pequeña empresa y
+              hemos crecido a lo largo de los años para convertirnos en uno de los principales proveedores de alquiler
+              de vehículos de la zona.
+              Nos esforzamos por ofrecer un servicio personalizado y amable a cada uno de nuestros clientes, y nos
+              enorgullecemos de la calidad de nuestros vehículos.
+              Ofrecemos una amplia gama de vehículos para satisfacer las necesidades de nuestros clientes. Desde
+              bicicletas económicas hasta vehículos todoterreno, tenemos algo para todos. También ofrecemos servicios
+              adicionales, como la entrega y recogida de vehículos en el aeropuerto y en hoteles locales.</p>
+            <div class="text-center">
+              <h5>Horarios de atención:</h5>
+              <p>Lunes a Sabados: 8:00 - 18:00hs</p>
+              <p> <strong>Telefono:</strong> +52 999-999-0090</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-    <div class="col-md-4 col-lg-3">
-      <div class="card mb-2 integrantes">
-        <div>
-          <img src="./assets/img/perfil-lucas.png" class="card-img-top" alt="foto-lucas">
+
+
+  </section>
+
+  <section id="grupo" class="text-center text-white">
+    <h3 class="mb-2 titulos">Creadores</h3>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-lg-3">
+          <div class="card mb-2 integrantes">
+            <div>
+              <img src="./assets/img/perfil-maxi.jpg" class="card-img-top" alt="foto-maxi">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Maximiliano Rao</h5>
+              <div class="espec">
+                <p class="card-text">
+                  <strong>Edad:</strong> 29 años <br>
+                  <strong>Ciudad:</strong> Cordoba <br>
+                  <strong>Profesion:</strong> Analista en Ciberseguridad <br>
+                </p>
+              </div>
+
+            </div>
+          </div>
         </div>
-        <div class="card-body text-center">
-          <h5 class="card-title">Lucas Rojas</h5>
-          <div class="espec">
-          <p class="card-text">
-            <strong>Edad:</strong> 29 años <br>
-            <strong>Ciudad:</strong> Barranqueras <br>
-            <strong>Profesion:</strong> Analista Calidad y Experiencia <br>
-          </p>
+        <div class="col-md-4 col-lg-3">
+          <div class="card mb-2 integrantes">
+            <div>
+              <img src="./assets/img/perfil-lucas.png" class="card-img-top" alt="foto-lucas">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Lucas Rojas</h5>
+              <div class="espec">
+                <p class="card-text">
+                  <strong>Edad:</strong> 29 años <br>
+                  <strong>Ciudad:</strong> Barranqueras <br>
+                  <strong>Profesion:</strong> Analista Calidad y Experiencia <br>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center active">
-  <i class="bi bi-arrow-up-short"></i>
-</a>
-</section>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center active">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+  </section>
 
-<footer class="bg-light text-center text-white">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a title="facebook" class="btn text-white btn-floating m-1 footer-icono facebook" href="https://es-la.facebook.com/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
+  <footer class="bg-light text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a title="facebook" class="btn text-white btn-floating m-1 footer-icono facebook"
+          href="https://es-la.facebook.com/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
 
-      <!-- Instagram -->
-      <a title="instagram" class="btn text-white btn-floating m-1 footer-icono instagram" href="https://www.instagram.com/" target="_blank" role="button"><i class="bi bi-instagram"></i></a>
-     
+        <!-- Instagram -->
+        <a title="instagram" class="btn text-white btn-floating m-1 footer-icono instagram"
+          href="https://www.instagram.com/" target="_blank" role="button"><i class="bi bi-instagram"></i></a>
+
         <!-- Google -->
         <a title="google" class="btn text-white btn-floating m-1 google footer-icono"
-        href="https://www.google.com/maps?ll=20.21543,-87.450773&z=15&t=m&hl=es-419&gl=AR&mapclient=embed&cid=15014803948658586038" role="button" target="_blank"><i class="bi bi-google"></i></a>
-      
-    
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
+          href="https://www.google.com/maps?ll=20.21543,-87.450773&z=15&t=m&hl=es-419&gl=AR&mapclient=embed&cid=15014803948658586038"
+          role="button" target="_blank"><i class="bi bi-google"></i></a>
 
-  <!-- Copyright -->
-  <div class="text-center p-3 copyright">
-    © 2020 Copyright
-  </div>
-  <!-- Copyright -->
-</footer>
 
-<!--jquery-->
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 copyright">
+      © 2020 Copyright
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <!--jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
- <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.5.0/jquery.serialize-object.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.5.0/jquery.serialize-object.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script> -->
   <!--Manipulación de fechas -->
@@ -733,7 +766,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
-    <!--jspdf-->
+  <!--jspdf-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <!--validate.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
