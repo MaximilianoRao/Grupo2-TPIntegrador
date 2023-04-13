@@ -1,8 +1,11 @@
-
+$(window).on("load", function() {
+  $("#cargando").fadeOut("slow");
+});
 
   
 $(document).ready(function() {
-
+  
+  $(".bi-arrow-up-short").hide();
   $(window).scroll(function() {
     let boton = $(".bi-arrow-up-short");
     
@@ -674,6 +677,9 @@ function calculodias(fecha1, fecha2){
   let fecha1_sin_horas = moment(fecha1).startOf('day');
   let fecha2_sin_horas = moment(fecha2).startOf('day');
   let dias = fecha2_sin_horas.diff(fecha1_sin_horas, 'days');
+  if(dias == 0){
+    dias = 1;
+  }
 return dias;
 }
 
