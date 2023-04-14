@@ -24,11 +24,11 @@ $(document).ready(function () {
 
 
     if (valorFiltro === 'todos') {
-      $('.filtro-imagen').fadeIn();
+      $('.filtro-imagen').show();
     } else {
 
-      $('.filtro-imagen').fadeOut();
-      $('.filtro-imagen.' + valorFiltro).fadeIn();
+      $('.filtro-imagen').hide();
+      $('.filtro-imagen.' + valorFiltro).show();
     }
     $(this).addClass('active');
     $(this).parent().siblings().find('a').removeClass('active');
