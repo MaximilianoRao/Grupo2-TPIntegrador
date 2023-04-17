@@ -875,10 +875,10 @@ $(document).ready(function () {
 
 
   function divisas() {
-    $('#apidivisa').html('<strong> USD = </strong> ');
-    $('#apidivisa').append('<strong> 18.18 MXN</strong>');
+    //$('#apidivisa').html('<strong> USD = </strong> ');
+   // $('#apidivisa').append('<strong> 18.18 MXN</strong>');
 
-    /* $.getJSON('https://api.apilayer.com/exchangerates_data/convert?to=MXN&from=USD&amount=1&apikey=RGIIipYZ4OZXgIqsHeM96Qse78TV2KCK', function(divisa){
+    $.getJSON('https://api.apilayer.com/exchangerates_data/convert?to=MXN&from=USD&amount=1&apikey=RGIIipYZ4OZXgIqsHeM96Qse78TV2KCK', function(divisa){
   
         let from = divisa.query.from;
         let to = divisa.query.to;
@@ -888,7 +888,7 @@ $(document).ready(function () {
       $('#apidivisa').append('<strong> '+result+' '+to+'</strong>'); 
       
   
-    }); */
+    });
 
   }
 
