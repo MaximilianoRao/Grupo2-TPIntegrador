@@ -683,7 +683,13 @@ $(document).ready(function () {
     return dias;
   }
 
-  let today = new Date().toISOString().substr(0, 16);
+  let fecha = new Date();
+  fecha.setDate(fecha.getDate() + 1);
+  let today = fecha.getFullYear() + '-' +
+            ('0' + (fecha.getMonth()+1)).slice(-2) + '-' +
+            ('0' + fecha.getDate()).slice(-2) + 'T' +
+            '00'+ ':' +
+            '00';
   $('#fecha-hora-i').attr('min', today);
   $('#fecha-hora-f').attr('min', today);
   $("#fecha-hora-f, #fecha-hora-i").on("change", function () {
