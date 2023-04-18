@@ -442,70 +442,70 @@ $(document).ready(function () {
       case 'panther':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Bicicleta-Cruiser-Vintage-Dama-Canasta.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (150 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (150 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte' + '</p>');
 
         break;
       case 'molotov':
         $('#imgselectid').attr('src', './assets/img/vehiculos/dinamo-molotov-rojo1200x900.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (2000 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $3000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (2000 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $3000 MXN' + '</p>');
 
         break;
       case 'atv180':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Cuatrimoto-ATV180-Verde-Negro-1200x825-1.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (1400 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $3000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (1400 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $3000 MXN' + '</p>');
         break;
       case 'atv200':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Cuatrimoto-ATV200-Naranja-Negro-1200x1000-1.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (1800 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $3000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (1800 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $3000 MXN' + '</p>');
         break;
       case 'dm250':
         $('#imgselectid').attr('src', './assets/img/vehiculos/DobleProposito-DM250-X-Negro-1.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (1250 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $3000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (1250 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $3000 MXN' + '</p>');
         break;
       case 'd125lt':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Motoneta-D125-LT-Azul-Negro.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (525 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $2000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (525 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $2000 MXN' + '</p>');
         break;
       case 'd125':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Motoneta-D125-Blanco-Azul.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (525 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $2000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (525 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $2000 MXN' + '</p>');
         break;
       case 'd150':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Motoneta-D150-Azul-Negro.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (700 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $2000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (700 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $2000 MXN' + '</p>');
         break;
       case 'xw150':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Motoneta-XW150-Rojo-Negro.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (700 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $2000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (700 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $2000 MXN' + '</p>');
         break;
       case '150azul':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Motoneta-Vitalia-150-Azul-Blanco.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (700 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $2000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (700 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $2000 MXN' + '</p>');
         break;
       case '150rojo':
         $('#imgselectid').attr('src', './assets/img/vehiculos/Motoneta-Vitalia-150-Rojo-Blanco.png');
         $('#imgselect').fadeIn();
-        $('#precio').html('<p><strong>Precio: </strong> ' + '$ ' + (700 * dias) + ' MXN</p>');
-        $('#deposito').html('<p><strong>Depósito: </strong> ' + ' Pasaporte + $2000 MXN' + '</p>');
+        $('#precio').html('<p><span class="negrita">Precio: </span> ' + '$ ' + (700 * dias) + ' MXN</p>');
+        $('#deposito').html('<p><span class="negrita">Depósito: </span> ' + ' Pasaporte + $2000 MXN' + '</p>');
         break;
       default:
         $('#imgselect').hide();
@@ -648,23 +648,23 @@ $(document).ready(function () {
 
     $('#resumentext').html('<h4 class="text-center">Resumen de reserva</h4>');
     $('#resumentext').append('<h5><u>Información personal</u></h5>');
-    $('#resumentext').append('<p><strong>Nombre y apellido: </strong> ' + nombre + '</p>');
-    $('#resumentext').append('<p><strong>Edad:</strong> ' + edad + '</p>');
-    $('#resumentext').append('<p><strong>Correo electrónico:</strong> ' + correo + '</p>');
-    $('#resumentext').append('<p><strong>Teléfono: </strong> ' + telefono + '</p>');
-    $('#resumentext').append('<p><strong>Dirección de hospedaje: </strong> ' + direccion + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Nombre y apellido: </span> ' + nombre + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Edad:</span> ' + edad + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Correo electrónico:</span> ' + correo + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Teléfono: </span> ' + telefono + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Dirección de hospedaje: </span> ' + direccion + '</p>');
     $('#resumentext').append('<h5><u>Detalle de alquiler</u></h5>');
-    $('#resumentext').append('<p><strong>Día de inicio: </strong> ' + fecha1 + '</p>');
-    $('#resumentext').append('<p><strong>Hora de inicio: </strong> ' + hora1 + '</p>');
-    $('#resumentext').append('<p><strong>Día de fin: </strong> ' + fecha2 + '</p>');
-    $('#resumentext').append('<p><strong>Hora de fin: </strong> ' + hora2 + '</p>');
-    $('#resumentext').append('<p><strong>Días de alquiler: </strong> ' + calculodias(fechai, fechaf) + '</p>');
-    $('#resumentext').append('<p><strong>Forma de entrega: </strong> ' + fentrega + '</p>');
-    $('#resumentext').append('<p><strong>Cantidad de personas: </strong> ' + cantp + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Día de inicio: </span> ' + fecha1 + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Hora de inicio: </span> ' + hora1 + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Día de fin: </span> ' + fecha2 + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Hora de fin: </span> ' + hora2 + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Días de alquiler: </span> ' + calculodias(fechai, fechaf) + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Forma de entrega: </span> ' + fentrega + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Cantidad de personas: </span> ' + cantp + '</p>');
     $('#resumentext').append('<h5><u>Detalle de vehículo</u></h5>');
     $('#resumentext').append("<img class='col-10 offset-1' src='" + imagenSrc + "' alt='Imagen del formulario'>");
-    $('#resumentext').append('<p><strong>Tipo de vehículo: </strong> ' + tipov + '</p>');
-    $('#resumentext').append('<p><strong>Modelo de vehículo: </strong> ' + modelo + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Tipo de vehículo: </span> ' + tipov + '</p>');
+    $('#resumentext').append('<p><span class="negrita">Modelo de vehículo: </span> ' + modelo + '</p>');
     $('#resumentext').append(precio);
     $('#resumentext').append(deposito);
     $('#resumentext').append('<h5><u>Comentarios</u></h5>');
@@ -872,7 +872,7 @@ $(document).ready(function () {
       //$("#imgIco").attr("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
       $('#apiclima').html(ciudad + '-' + pais);
       $('#apiclima').append("<img src='" + `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` + "' alt='imagen clima'>");
-      $('#apiclima').append('<strong>' + temp + '</strong>');
+      $('#apiclima').append('<span class="negrita">' + temp + '</span>');
 
 
     });
@@ -881,8 +881,8 @@ $(document).ready(function () {
 
 
   function divisas() {
-    //$('#apidivisa').html('<strong> USD = </strong> ');
-   // $('#apidivisa').append('<strong> 18.18 MXN</strong>');
+    //$('#apidivisa').html('<span class="negrita"> USD = </span> ');
+   // $('#apidivisa').append('<span class="negrita"> 18.18 MXN</span>');
 
     $.getJSON('https://api.apilayer.com/exchangerates_data/convert?to=MXN&from=USD&amount=1&apikey=RGIIipYZ4OZXgIqsHeM96Qse78TV2KCK', function(divisa){
   
@@ -890,8 +890,8 @@ $(document).ready(function () {
         let to = divisa.query.to;
         let result= (divisa.result).toFixed(2);
   
-      $('#apidivisa').html('<strong>'+from+' = </strong> ');
-      $('#apidivisa').append('<strong> '+result+' '+to+'</strong>'); 
+      $('#apidivisa').html('<span class="negrita">'+from+' = </span> ');
+      $('#apidivisa').append('<span class="negrita"> '+result+' '+to+'</span>'); 
       
   
     });

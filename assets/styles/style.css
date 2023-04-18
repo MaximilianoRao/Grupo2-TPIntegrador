@@ -231,6 +231,10 @@ section,
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+.negrita {
+  font-weight: 600;
+}
+
 @keyframes slide-in {
   0% {
     transform: translateX(-100%);
