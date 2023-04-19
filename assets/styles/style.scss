@@ -188,6 +188,7 @@ section,
     }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -201,6 +202,13 @@ section,
 }
 
 @keyframes slide-up {
+=======
+.negrita{
+    font-weight: 600;
+}
+
+@keyframes slide-in {
+>>>>>>> 68766d58e6b5de31b655e00a20c4b32c1d9d071c
     0% {
       transform: translateY(100%);
     }
@@ -237,7 +245,12 @@ section,
     padding-bottom: 10px;
     
 }
+<<<<<<< HEAD
     
+=======
+
+
+>>>>>>> 68766d58e6b5de31b655e00a20c4b32c1d9d071c
 .filtro-imagen {
     padding: 10px !important;
 }

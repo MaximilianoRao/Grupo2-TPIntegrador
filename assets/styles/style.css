@@ -179,6 +179,7 @@ section,
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+<<<<<<< HEAD
 @-webkit-keyframes fade {
   from {
     opacity: 0;
@@ -197,6 +198,13 @@ section,
   }
 }
 @-webkit-keyframes slide-up {
+=======
+.negrita {
+  font-weight: 600;
+}
+
+@keyframes slide-in {
+>>>>>>> 68766d58e6b5de31b655e00a20c4b32c1d9d071c
   0% {
     transform: translateY(100%);
   }
