@@ -883,12 +883,12 @@ $(document).ready(function () {
   function divisas() {
     //$('#apidivisa').html('<span class="negrita"> USD = </span> ');
    // $('#apidivisa').append('<span class="negrita"> 18.18 MXN</span>');
-
-    $.getJSON('https://api.apilayer.com/exchangerates_data/convert?to=MXN&from=USD&amount=1&apikey=RGIIipYZ4OZXgIqsHeM96Qse78TV2KCK', function(divisa){
+//https://api.apilayer.com/exchangerates_data/convert?to=MXN&from=USD&amount=1&apikey=RGIIipYZ4OZXgIqsHeM96Qse78TV2KCK
+    $.getJSON('https://openexchangerates.org/api/latest.json?app_id=3de8f98fdf744a0181f73e7a18dd37de&base=USD&symbols=MXN', function(divisa){
   
-        let from = divisa.query.from;
-        let to = divisa.query.to;
-        let result= (divisa.result).toFixed(2);
+        let from = divisa.base;
+        let to = Object.keys(divisa.rates)[0];
+        let result= (divisa.rates.MXN).toFixed(2);
   
       $('#apidivisa').html('<span class="negrita">'+from+' = </span> ');
       $('#apidivisa').append('<span class="negrita"> '+result+' '+to+'</span>'); 
