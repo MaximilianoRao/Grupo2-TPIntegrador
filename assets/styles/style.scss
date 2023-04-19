@@ -245,7 +245,7 @@ section,
     // min-height: 520px;
     background-color: rgba(0, 0, 0, 49%);
     color: white;
-    transform: translateX(-100%);
+    transform: translateY(100%) 2s;
     animation: slide-in 1.2s forwards;
 
     //background-color: #3a5a5c4b;
@@ -259,7 +259,7 @@ section,
 
 @keyframes slide-in {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
 
     100% {
